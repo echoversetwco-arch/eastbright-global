@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eastbright Global｜跨國跨境品牌整合行銷 × AI 賦能</title>
+<meta name="description" content="Eastbright Global 提供跨國跨境品牌整合行銷與 AI 賦能系統，協助品牌進入台灣、港澳與東南亞市場，在陌生市場真正落地並持續增長。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#101112;
+  --ink-2:#18191B;
+  --ink-70:#4A4D52;
+  --ink-45:#686C72;
+  --ink-15:#DCDEE0;
+  --rule-dk:#2C2E31;
+  --rule-dk2:#3A3D42;
+  --paper:#FFFFFF;
+  --mist:#F3F5E9;
+  --lime:#C9F73D;
+  --lime-deep:#A8D42B;
+  --dk-1:#B9BCC1;
+  --dk-2:#9A9DA3;
+  --dk-3:#7E8288;
+  --font:"Archivo","Noto Sans TC",sans-serif;
+  --mono:"IBM Plex Mono","Noto Sans TC",ui-monospace,monospace;
+  --pad:clamp(1.25rem,5vw,3rem);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.85;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--lime);color:var(--ink)}
+:focus-visible{outline:3px solid var(--lime-deep);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Nav（深色） ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:.95rem var(--pad);
+  background:rgba(16,17,18,.93);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--rule-dk);transition:padding .3s}
+.nav.stuck{padding-top:.7rem;padding-bottom:.7rem}
+.nav-in{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.brand{display:inline-flex;align-items:center;gap:.5rem;font-weight:900;font-size:clamp(.86rem,2.4vw,1rem);
+  letter-spacing:.1em;white-space:nowrap;color:#fff}
+.brand i{display:block;width:.62rem;height:.62rem;border-radius:50%;background:var(--lime);flex:none}
+.nav-links{display:flex;align-items:center;gap:1.7rem;list-style:none;font-size:.85rem;font-weight:600}
+.nav-links a{color:var(--dk-1);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-links a.nav-cta{background:var(--lime);color:var(--ink);padding:.5rem 1.25rem;border-radius:999px;font-weight:800;transition:background .25s}
+.nav-links a.nav-cta:hover{background:#fff;color:var(--ink)}
+.burger{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:.3rem}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.65rem;padding:.95rem 1.9rem;font-size:.9rem;font-weight:800;
+  letter-spacing:.04em;cursor:pointer;border:1.5px solid var(--ink);border-radius:999px;
+  transition:background .25s,color .25s,border-color .25s}
+.btn .arr{transition:transform .25s}
+.btn:hover .arr{transform:translateX(6px)}
+.btn-lime{background:var(--lime);border-color:var(--lime);color:var(--ink)}
+.btn-lime:hover{background:#fff;border-color:#fff}
+.btn-ghost-dark{background:transparent;color:#fff;border-color:#5A5E64}
+.btn-ghost-dark:hover{border-color:var(--lime);color:var(--lime)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--ink-2)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+
+/* ---------- 站點標籤（貫穿全站的路線節點） ---------- */
+.rail{font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.14em;
+  display:flex;align-items:center;gap:.6rem}
+.rail::before{content:"";width:.62rem;height:.62rem;border-radius:50%;background:var(--lime);
+  border:1.5px solid var(--ink);flex:none}
+.shead{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(1rem,3vw,2.5rem);
+  border-top:1.5px solid var(--ink);padding-top:1.3rem;margin-bottom:clamp(2.4rem,5vw,3.6rem)}
+.shead .rail{padding-top:.55rem;align-self:start}
+.h2{font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:900;line-height:1.36;letter-spacing:.01em;text-wrap:balance}
+.shead .sub{margin-top:.95rem;color:var(--ink-70);max-width:40em;font-size:clamp(.95rem,1.2vw,1.05rem);line-height:1.9}
+
+.sec{padding:clamp(4.5rem,9vw,7rem) 0}
+.sec-mist{background:var(--mist)}
+.dark{background:var(--ink);color:#fff}
+.dark .shead{border-top-color:var(--rule-dk2)}
+.dark .rail{color:var(--dk-1)}
+.dark .rail::before{border-color:var(--lime)}
+.dark .shead .sub{color:var(--dk-1)}
+
+/* ---------- 1 Hero：航線 ---------- */
+.hero{position:relative;background:var(--ink);color:#fff;min-height:90svh;display:flex;align-items:center;
+  padding:7.5rem 0 4rem;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-18%;top:-10%;width:min(80vw,1000px);aspect-ratio:1;border-radius:50%;
+  pointer-events:none;background:radial-gradient(circle,rgba(201,247,61,.12),transparent 60%)}
+.hero .wrap{position:relative;z-index:2;width:100%}
+.hero-meta{display:flex;justify-content:space-between;align-items:center;gap:1rem 2rem;flex-wrap:wrap;
+  font-family:var(--mono);font-size:.74rem;letter-spacing:.13em;padding-bottom:1.1rem;border-bottom:1px solid var(--rule-dk)}
+.hero-meta .tagline{color:var(--lime);font-weight:500}
+.clock{color:var(--dk-2)}
+.clock b{color:#fff;font-weight:600;margin:0 .35rem}
+
+.route{position:relative;display:grid;grid-template-columns:repeat(3,1fr);
+  margin:clamp(2.8rem,6.5vw,4.8rem) 0 clamp(2.4rem,5vw,3.6rem);font-weight:900}
+.track{position:absolute;left:10px;right:calc(33.333% - 10px);top:9px;height:2px;background:var(--rule-dk2)}
+.track i{position:absolute;top:50%;left:0;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;
+  background:var(--lime);box-shadow:0 0 0 6px rgba(201,247,61,.18);animation:travel 4.6s cubic-bezier(.65,0,.3,1) infinite}
+@keyframes travel{0%{left:0}62%,100%{left:100%}}
+.stop{position:relative;display:block;padding-top:2.5rem}
+.node{position:absolute;top:0;left:0;width:20px;height:20px;border-radius:50%;background:var(--ink);border:2px solid #fff;z-index:2}
+.stop.end .node{background:var(--lime);border-color:var(--lime)}
+.word{display:block;font-size:clamp(2rem,7vw,5.6rem);line-height:1.08;letter-spacing:.02em}
+.word.pill{display:inline-block;background:var(--lime);color:var(--ink);border-radius:999px;padding:.02em .38em .08em}
+.stop small{display:block;margin-top:.85rem;font-family:var(--mono);font-size:clamp(.6rem,1vw,.72rem);font-weight:500;
+  letter-spacing:.16em;color:var(--dk-3)}
+.stop.end small{color:var(--lime)}
+
+.hero-foot{display:grid;grid-template-columns:minmax(0,1.35fr) auto;gap:1.5rem 3rem;align-items:end;
+  border-top:1px solid var(--rule-dk);padding-top:1.8rem}
+.hero-sub{max-width:38em;color:var(--dk-1);font-size:clamp(.98rem,1.3vw,1.08rem);line-height:1.9}
+.hero-cta{display:flex;gap:.8rem;flex-wrap:wrap}
+
+/* ---------- Lime marquee ---------- */
+.strip{background:var(--lime);color:var(--ink);padding:.9rem 0;overflow:hidden;border-bottom:1.5px solid var(--ink)}
+.strip-run{display:flex;width:max-content;animation:run 38s linear infinite}
+.strip:hover .strip-run{animation-play-state:paused}
+.strip-run span{display:inline-flex;align-items:center;gap:2.2rem;padding-right:2.2rem;
+  font-size:.86rem;font-weight:800;letter-spacing:.05em;white-space:nowrap}
+.strip-run span::after{content:"✳";font-size:.78rem}
+@keyframes run{to{transform:translateX(-50%)}}
+
+/* ---------- 2 Overview：階梯架構 ---------- */
+.ov{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(1rem,3vw,2.5rem)}
+.ov-body{grid-column:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,4.5vw,3.5rem);align-items:start}
+.ov .lead{font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.95}
+.ov .lead2{margin-top:1.1rem;color:var(--ink-70);font-size:.95rem;line-height:1.95}
+.ov .lead2 b{color:var(--ink);font-weight:800}
+.stairs{display:flex;flex-direction:column;gap:6px}
+.step{height:76px;width:72%;display:flex;align-items:center;gap:.9rem;padding:0 1.15rem}
+.step .n{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.08em}
+.step b{font-size:1rem;font-weight:900;letter-spacing:.04em;white-space:nowrap}
+.step small{margin-left:auto;font-family:var(--mono);font-size:.6rem;font-weight:500;letter-spacing:.12em;white-space:nowrap}
+.s3{margin-left:28%;background:var(--lime);color:var(--ink);border:1.5px solid var(--ink)}
+.s2{margin-left:14%;background:var(--ink);color:#fff}
+.s1{background:var(--ink);color:#fff}
+.s1 .n,.s2 .n{color:var(--dk-2)}
+.s1 small,.s2 small{color:var(--lime)}
+.stairs-cap{margin-top:1.1rem;font-size:.84rem;color:var(--ink-45);line-height:1.8}
+
+/* ---------- 3 Markets：航班看板 ---------- */
+.board{border-top:1.5px solid var(--lime)}
+.b-row{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,2fr) minmax(0,5.2fr) minmax(0,1.1fr);
+  gap:1.6rem;align-items:center;padding:1.5rem .5rem;border-bottom:1px solid var(--rule-dk);transition:background .25s}
+.b-row:not(.b-head):hover{background:var(--ink-2)}
+.b-head{padding:.8rem .5rem;font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.18em;color:var(--dk-3)}
+.b-code{font-family:var(--mono);font-size:clamp(1.5rem,2.8vw,2.3rem);font-weight:600;color:var(--lime);line-height:1;letter-spacing:.02em}
+.b-name b{display:block;font-size:1.1rem;font-weight:900;color:#fff;letter-spacing:.03em}
+.b-name small{display:block;margin-top:.3rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;color:var(--dk-3)}
+.b-desc{font-size:.92rem;color:var(--dk-1);line-height:1.85}
+.b-tz{font-family:var(--mono);font-size:.76rem;color:var(--dk-2);text-align:right;white-space:nowrap}
+.b-head .b-tz{font-size:.64rem;color:var(--dk-3)}
+
+/* ---------- 4 Solutions：黑線分格 ---------- */
+.sol3{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.sol{padding:clamp(1.6rem,3vw,2.2rem);border-right:1.5px solid var(--ink);display:flex;flex-direction:column;transition:background .3s}
+.sol:last-child{border-right:none}
+.sol:hover{background:var(--lime)}
+.sol-top{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.sol .en{font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.12em;border:1.5px solid var(--ink);
+  padding:.2rem .65rem;border-radius:999px;white-space:nowrap}
+.go{width:2.6rem;height:2.6rem;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1.05rem;flex:none;transition:transform .3s}
+.sol:hover .go,.go:focus-visible{transform:rotate(-45deg)}
+.sol h3{font-size:clamp(1.5rem,2.6vw,2rem);font-weight:900;margin:1.7rem 0 .7rem;letter-spacing:.03em}
+.sol .one{font-size:.92rem;color:var(--ink-70);line-height:1.85}
+.sol ul{list-style:none;margin-top:1.4rem;padding-top:1.2rem;border-top:1.5px solid var(--ink-15);
+  display:flex;flex-direction:column;gap:.55rem;transition:border-color .3s}
+.sol:hover ul{border-top-color:rgba(16,17,18,.28)}
+.sol li{position:relative;padding-left:1.35rem;font-size:.88rem;line-height:1.7}
+.sol li::before{content:"";position:absolute;left:0;top:.6rem;width:.55rem;height:.55rem;background:var(--lime);border:1.5px solid var(--ink)}
+.sec-note{margin-top:1.4rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--ink-45)}
+
+/* ---------- 5 Advantage ---------- */
+.stats3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
+  margin-bottom:clamp(2.6rem,5vw,3.8rem)}
+.st{padding:1.6rem 1.4rem 1.5rem;border-right:1.5px solid var(--ink)}
+.st:last-child{border-right:none}
+.st b{display:block;font-size:clamp(3rem,7vw,5.4rem);font-weight:900;line-height:.95;letter-spacing:-.02em}
+.st span{display:block;margin-top:.8rem;font-size:.95rem;font-weight:800}
+.st small{display:block;margin-top:.2rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--ink-45)}
+
+.ico{width:3.6rem;height:3.6rem;position:relative;color:var(--ink);flex:none}
+.ico::before{content:"";position:absolute;inset:8%;border-radius:50%;background:var(--lime)}
+.ico svg{position:relative;width:100%;height:100%;display:block}
+.pils{border-top:1.5px solid var(--ink)}
+.pil{display:grid;grid-template-columns:auto minmax(0,2.4fr) minmax(0,3.6fr) minmax(0,5fr);gap:1.6rem;
+  align-items:start;padding:1.8rem 0;border-bottom:1.5px solid var(--ink-15)}
+.pil .en{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.13em;color:var(--ink-45);padding-top:.5rem}
+.pil h3{font-size:clamp(1.08rem,1.8vw,1.28rem);font-weight:900;line-height:1.55}
+.pil p{font-size:.9rem;color:var(--ink-70);line-height:1.85}
+
+.team-h{margin-top:clamp(3rem,6vw,4.2rem);display:flex;align-items:center;gap:1rem;font-size:1.05rem;font-weight:900;letter-spacing:.06em}
+.team-h::after{content:"";flex:1;height:1.5px;background:var(--ink-15)}
+.team{margin-top:1.6rem;display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.8rem,3.5vw,3rem)}
+.fd{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1.3rem;align-items:start}
+.fd-code{width:4.2rem;height:4.2rem;background:var(--ink);color:var(--lime);font-family:var(--mono);font-weight:600;
+  font-size:1.25rem;display:flex;align-items:center;justify-content:center;letter-spacing:.04em}
+.fd-name{font-size:clamp(1.2rem,2.2vw,1.42rem);font-weight:900;letter-spacing:.02em;line-height:1.3}
+.fd-role{margin-top:.4rem;font-size:.8rem;font-weight:800;letter-spacing:.06em;color:var(--ink-70)}
+.loc{display:inline-block;margin-left:.45rem;font-size:.7rem;font-weight:800;color:var(--ink);background:var(--lime);
+  padding:.12rem .55rem;border-radius:999px}
+.fd-bio{margin-top:.9rem;font-size:.9rem;color:var(--ink-70);line-height:1.85}
+.ftags{margin-top:1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.ftags span{font-size:.73rem;font-weight:700;border:1.5px solid var(--ink);padding:.18rem .72rem;border-radius:999px}
+
+/* 入場票券 */
+.ticket{margin-top:clamp(3rem,6vw,4.2rem);display:grid;grid-template-columns:minmax(0,2.25fr) minmax(0,1fr);
+  background:var(--ink);color:#fff;border-radius:14px;overflow:hidden}
+.t-main{padding:clamp(1.8rem,3.5vw,2.6rem)}
+.t-tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.16em;color:var(--ink);background:var(--lime);
+  padding:.22rem .72rem;border-radius:999px}
+.t-main h3{font-size:clamp(1.5rem,3vw,2.15rem);font-weight:900;margin-top:1rem;letter-spacing:.03em}
+.t-main .d{margin-top:.75rem;color:var(--dk-1);font-size:.94rem;line-height:1.85;max-width:34em}
+.t-main ul{list-style:none;margin-top:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1.6rem}
+.t-main li{position:relative;padding-left:1.35rem;font-size:.88rem;color:var(--dk-1);line-height:1.7}
+.t-main li::before{content:"";position:absolute;left:0;top:.6rem;width:.55rem;height:.55rem;background:var(--lime)}
+.t-main li b{color:#fff;font-weight:700}
+.t-stub{position:relative;padding:clamp(1.8rem,3.5vw,2.6rem) clamp(1.4rem,3vw,2rem);border-left:2px dashed var(--rule-dk2);
+  display:flex;flex-direction:column;justify-content:space-between;gap:1.4rem}
+.t-stub::before,.t-stub::after{content:"";position:absolute;left:-14px;width:26px;height:26px;border-radius:50%;background:var(--mist)}
+.t-stub::before{top:-13px}
+.t-stub::after{bottom:-13px}
+.t-pass{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.18em;color:var(--lime)}
+.t-price b{display:block;font-size:clamp(2rem,3.8vw,2.7rem);font-weight:900;color:var(--lime);line-height:1;letter-spacing:-.01em}
+.t-price span{display:block;margin-top:.55rem;font-family:var(--mono);font-size:.74rem;color:var(--dk-2)}
+.t-fine{font-size:.8rem;color:var(--dk-2);line-height:1.75}
+.t-fine b{color:#fff}
+
+/* ---------- 6 Insights：7／5 編排 ---------- */
+.ins-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(1.6rem,3.5vw,3rem);align-items:start}
+.cases{display:flex;flex-direction:column;gap:1.4rem}
+.case{border:1.5px solid var(--ink);display:flex;flex-direction:column}
+.vis{height:clamp(118px,13vw,150px);display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;
+  padding:1.1rem 1.4rem;border-bottom:1.5px solid var(--ink)}
+.vis b{font-family:var(--mono);font-size:clamp(2.6rem,6vw,4.2rem);font-weight:600;line-height:.9}
+.vis small{font-family:var(--mono);font-size:.62rem;font-weight:500;letter-spacing:.16em;padding-bottom:.25rem}
+.vis-ink{background:var(--ink);color:var(--lime)}
+.vis-ink small{color:var(--dk-1)}
+.vis-lime{background:var(--lime);color:var(--ink)}
+.case-b{padding:1.4rem 1.5rem 1.6rem}
+.meta{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.t-case{font-size:.66rem;font-weight:800;color:#fff;background:var(--ink);padding:.16rem .6rem;border-radius:999px}
+.t-ins{font-size:.66rem;font-weight:800;color:var(--ink);background:var(--lime);padding:.16rem .6rem;border-radius:999px}
+.meta .m{font-family:var(--mono);font-size:.72rem;color:var(--ink-45)}
+.case h3{font-size:clamp(1.05rem,1.8vw,1.22rem);font-weight:900;line-height:1.6;margin-top:.8rem}
+.case p{margin-top:.55rem;font-size:.88rem;color:var(--ink-70);line-height:1.85}
+.ins-list{border-top:1.5px solid var(--ink)}
+.ins{padding:1.35rem 0 1.45rem;border-bottom:1.5px solid var(--ink-15)}
+.ins h3{font-size:1.04rem;font-weight:900;line-height:1.6;margin-top:.7rem}
+.ins p{margin-top:.5rem;font-size:.86rem;color:var(--ink-70);line-height:1.8}
+.more{margin-top:2.2rem;padding-top:1.3rem;border-top:1.5px solid var(--ink);font-size:.88rem;color:var(--ink-70);line-height:2}
+.more .lb{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--ink-45);margin-right:.8rem}
+.more b{color:var(--ink);font-weight:800}
+.more i{font-style:normal;color:var(--ink-45);margin:0 .45rem}
+.note{margin-top:.5rem;font-size:.8rem;color:var(--ink-45)}
+
+/* ---------- 7 FAQ：左固定、右手風琴 ---------- */
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(2rem,5vw,4rem);align-items:start}
+.faq-side{position:sticky;top:92px;border-top:1.5px solid var(--ink);padding-top:1.3rem}
+.faq-side .h2{margin-top:1.1rem}
+.side-note{margin-top:1.3rem;font-size:.9rem;color:var(--ink-70);line-height:1.8}
+.side-note a{color:var(--ink);font-weight:800;border-bottom:2px solid var(--lime-deep)}
+.faq{border-top:1.5px solid var(--ink)}
+.faq details{border-bottom:1.5px solid var(--ink-15)}
+.faq summary{cursor:pointer;list-style:none;padding:1.3rem 0;display:flex;gap:1rem;align-items:center;
+  font-weight:800;font-size:clamp(.97rem,1.6vw,1.08rem);line-height:1.6}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover .q{color:var(--ink-70)}
+.faq .num{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--ink-45);width:2rem;flex:none}
+.faq .q{flex:1}
+.faq .ic{position:relative;width:1.05rem;height:1.05rem;flex:none}
+.faq .ic::before,.faq .ic::after{content:"";position:absolute;background:var(--ink);transition:transform .25s}
+.faq .ic::before{left:0;right:0;top:50%;height:2.5px;transform:translateY(-50%)}
+.faq .ic::after{top:0;bottom:0;left:50%;width:2.5px;transform:translateX(-50%)}
+.faq details[open] .ic::after{transform:translateX(-50%) scaleY(0)}
+.faq .ans{padding:0 2.2rem 1.6rem 3rem;color:var(--ink-70);font-size:.93rem;line-height:1.95}
+.faq .ans b{color:var(--ink);font-weight:700}
+.faq .ans a{color:var(--ink);font-weight:800;border-bottom:2px solid var(--lime-deep)}
+
+/* ---------- 8 Contact（萊姆） ---------- */
+.cta{background:var(--lime);color:var(--ink);padding:clamp(4rem,8vw,6.5rem) 0}
+.cta .rail::before{background:var(--ink)}
+.cta-grid{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem 3rem;align-items:center}
+.cta-h{margin-top:1.1rem;font-size:clamp(2.8rem,8.5vw,6.6rem);font-weight:900;line-height:1;letter-spacing:.02em}
+.cta .sub{margin-top:1.2rem;font-size:clamp(1rem,1.5vw,1.2rem);font-weight:800}
+.cta .body{margin-top:.9rem;max-width:40em;font-size:.94rem;color:var(--ink-70);line-height:1.9}
+.cta-btns{margin-top:1.9rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.ring-btn{display:block;width:clamp(8rem,13vw,10.5rem);height:clamp(8rem,13vw,10.5rem);flex:none}
+.ring-btn svg{width:100%;height:100%;display:block}
+.ring-btn .spin{transform-origin:60px 60px;animation:spin 24s linear infinite}
+.ring-btn .ar{transition:transform .35s;transform-origin:60px 60px}
+.ring-btn:hover .ar{transform:rotate(-45deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cta-rows{margin-top:clamp(2.4rem,5vw,3.2rem);border-top:1.5px solid var(--ink)}
+.crow{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,9fr);gap:clamp(1rem,3vw,2.5rem);align-items:center;
+  padding:1.05rem 0;border-bottom:1.5px solid rgba(16,17,18,.18)}
+.crow .k{font-family:var(--mono);font-size:.7rem;font-weight:500;letter-spacing:.18em;color:var(--ink-70)}
+.crow .v{font-size:clamp(.98rem,1.7vw,1.2rem);font-weight:800}
+.crow .v small{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--ink-70);margin-left:.6rem}
+a.crow:hover .v{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
+
+/* ---------- 9 Footer ---------- */
+footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 2rem;font-size:.86rem;overflow:hidden}
+.ft{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,.65fr) minmax(0,.75fr);gap:clamp(2rem,5vw,4rem)}
+.ft-brand{display:flex;align-items:center;gap:.5rem;font-weight:900;letter-spacing:.1em;color:#fff;font-size:1.05rem}
+.ft-brand i{display:block;width:.62rem;height:.62rem;border-radius:50%;background:var(--lime)}
+.ft-tag{margin-top:.45rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--lime)}
+.ft-about{margin-top:1.3rem;line-height:1.95;max-width:42em}
+.ft h4{font-family:var(--mono);color:#fff;font-size:.74rem;font-weight:500;letter-spacing:.14em;margin-bottom:1rem}
+.ft ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.ft a:hover{color:var(--lime)}
+.ft-mark{margin-top:clamp(2.6rem,6vw,4rem);font-size:clamp(2.2rem,12vw,9.4rem);font-weight:900;line-height:.82;
+  letter-spacing:-.01em;color:transparent;-webkit-text-stroke:1.5px var(--rule-dk2);white-space:nowrap;user-select:none}
+.ft-bot{margin-top:1.6rem;padding-top:1.4rem;border-top:1px solid var(--rule-dk);display:flex;
+  justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;color:var(--dk-3)}
+
+/* ---------- Reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.22,.9,.32,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none}
+  .track i{animation:none;left:100%}
+  .ring-btn .spin{animation:none}
+  .strip-run{animation:none;width:auto;flex-wrap:wrap}
+  .go,.ring-btn .ar{transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- RWD ---------- */
+@media (max-width:980px){
+  .shead,.ov{grid-template-columns:1fr}
+  .shead .rail{padding-top:0}
+  .ov-body{grid-column:1;grid-template-columns:1fr}
+  .sol3{grid-template-columns:1fr}
+  .sol{border-right:none;border-bottom:1.5px solid var(--ink)}
+  .sol:last-child{border-bottom:none}
+  .pil{grid-template-columns:auto minmax(0,1fr)}
+  .pil .en,.pil h3,.pil p{grid-column:2}
+  .pil .en{padding-top:0}
+  .ticket{grid-template-columns:1fr}
+  .t-stub{border-left:none;border-top:2px dashed var(--rule-dk2)}
+  .t-stub::before{left:-13px;top:-14px}
+  .t-stub::after{left:auto;right:-13px;top:-14px;bottom:auto}
+  .ins-grid,.faq-grid{grid-template-columns:1fr}
+  .faq-side{position:static}
+  .ft{grid-template-columns:1fr 1fr}
+  .ft>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  .hero-foot{grid-template-columns:1fr}
+  .b-row{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"code tz" "name name" "desc desc";gap:.55rem 1rem}
+  .b-head{display:none}
+  .b-code{grid-area:code}.b-name{grid-area:name}.b-tz{grid-area:tz}.b-desc{grid-area:desc}
+  .stats3{grid-template-columns:1fr}
+  .st{border-right:none;border-bottom:1.5px solid var(--ink)}
+  .st:last-child{border-bottom:none}
+  .team{grid-template-columns:1fr}
+  .t-main ul{grid-template-columns:1fr}
+  .cta-grid{grid-template-columns:1fr}
+  .crow{grid-template-columns:1fr;gap:.2rem}
+  .faq .ans{padding:0 0 1.5rem 3rem}
+}
+@media (max-width:720px){
+  .nav-links{position:fixed;top:56px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.3rem;
+    background:var(--ink);padding:1.6rem var(--pad) 2rem;display:none;border-bottom:1px solid var(--rule-dk)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+@media (max-width:560px){
+  .step{width:84%}
+  .s2{margin-left:8%}
+  .s3{margin-left:16%}
+  .step small{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="主導覽">
+  <div class="nav-in">
+    <a class="brand" href="#top"><i aria-hidden="true"></i>EASTBRIGHT GLOBAL</a>
+    <button class="burger" aria-label="開啟選單" aria-expanded="false" onclick="toggleMenu(this)">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h20M3 14h20M3 20h13"/></svg>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#solutions">解決方案</a></li>
+      <li><a href="#markets">跨境市場</a></li>
+      <li><a href="#advantage">核心優勢</a></li>
+      <li><a href="#insights">案例洞察</a></li>
+      <li><a href="#faq">常見問題</a></li>
+      <li><a class="nav-cta" href="#contact">預約諮詢</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- 1 Hero：航線 -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-meta rv">
+      <span class="tagline">INFINITE GROWTH, FROM THE EAST</span>
+      <span class="clock" aria-label="台灣、香港、澳門、吉隆坡當地時間">TW · HK · MO · KL<b data-clock>--:--</b>GMT+8</span>
+    </div>
+    <h1 class="route rv">
+      <span class="track" aria-hidden="true"><i></i></span>
+      <span class="stop"><span class="node" aria-hidden="true"></span><span class="word">洞察</span><small aria-hidden="true">01 · INSIGHT</small></span>
+      <span class="sr"> → </span>
+      <span class="stop"><span class="node" aria-hidden="true"></span><span class="word">落地</span><small aria-hidden="true">02 · LAND</small></span>
+      <span class="sr"> → </span>
+      <span class="stop end"><span class="node" aria-hidden="true"></span><span class="word pill">增長</span><small aria-hidden="true">03 · GROW</small></span>
+    </h1>
+    <div class="hero-foot rv">
+      <p class="hero-sub">我們提供跨國跨境品牌整合行銷與 AI 賦能系統，協助品牌全球化，讓品牌在陌生市場真正落地，從在地洞察中釋放可持續的增長價值。</p>
+      <div class="hero-cta">
+        <a class="btn btn-lime" href="#contact">預約諮詢 <span class="arr">→</span></a>
+        <a class="btn btn-ghost-dark" href="#diagnostic">跨境品牌檢測 <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="strip" aria-label="服務能力">
+  <div class="strip-run" id="strip">
+    <span>市場選擇評估</span><span>競品通路分析</span><span>在地化定位</span><span>整合內容策略</span><span>KOL 口碑佈局</span><span>全漏斗成長</span><span>AI 賦能導入</span><span>台灣・港澳・東南亞</span>
+  </div>
+</div>
+
+<!-- 2 Overview -->
+<section class="sec" id="overview">
+  <div class="wrap">
+    <div class="shead">
+      <p class="rail rv">OVERVIEW</p>
+      <h2 class="h2 rv">全方位跨境整合行銷，<br>專注亞太核心市場</h2>
+    </div>
+    <div class="ov">
+      <div class="ov-body">
+        <div>
+          <p class="lead rv">Eastbright Global 透過跨國跨境品牌整合行銷與 AI 賦能系統，協助品牌跨越「產品力強、市場不認識」的跨境斷層，同步完成在地化落地與規模化增長的雙重轉型。</p>
+          <p class="lead2 rv"><b>整合，意味著跨市場共用同一套策略。</b>定位、內容、通路、投放到會員經營不再各自為政，一個市場驗證過的打法，能有判斷地複製到下一個市場。</p>
+        </div>
+        <figure class="rv">
+          <div class="stairs" role="img" aria-label="解決方案架構，由下而上：AI 賦能系統、企業增量、市場進入">
+            <div class="step s3"><span class="n">03</span><b>市場進入</b><small>MARKET ENTRY</small></div>
+            <div class="step s2"><span class="n">02</span><b>企業增量</b><small>GROWTH</small></div>
+            <div class="step s1"><span class="n">01</span><b>AI 賦能系統</b><small>AI ENABLEMENT</small></div>
+          </div>
+          <figcaption class="stairs-cap">由下而上：AI 賦能系統是底層基礎，企業增量是成長引擎，市場進入是品牌在新市場被看見的頂點。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 Markets：航班看板 -->
+<section class="sec dark" id="markets">
+  <div class="wrap">
+    <div class="shead">
+      <p class="rail rv">MARKETS</p>
+      <div>
+        <h2 class="h2 rv">跨境市場佈局</h2>
+        <p class="sub rv">針對各市場獨特的消費文化、通路結構與法規環境量身打造進入方案，將在地洞察轉化為可衡量的營收與品牌成果。</p>
+      </div>
+    </div>
+    <div class="board rv" role="table" aria-label="跨境市場佈局">
+      <div class="b-row b-head" role="row">
+        <span role="columnheader">CODE</span><span role="columnheader">MARKET</span><span role="columnheader">APPROACH</span><span class="b-tz" role="columnheader">TIME ZONE</span>
+      </div>
+      <div class="b-row" role="row">
+        <span class="b-code" role="cell">TW</span>
+        <span class="b-name" role="cell"><b>台灣市場</b><small>TAIWAN</small></span>
+        <span class="b-desc" role="cell">建立在地溝通語彙與創作者信任網絡，加速品牌在高數位成熟度市場的認知、轉換與口碑累積。</span>
+        <span class="b-tz" role="cell">GMT+8</span>
+      </div>
+      <div class="b-row" role="row">
+        <span class="b-code" role="cell">HK·MO</span>
+        <span class="b-name" role="cell"><b>港澳市場</b><small>HONG KONG &amp; MACAU</small></span>
+        <span class="b-desc" role="cell">以雙語內容、跨境電商與在地社群並行佈局，協助品牌切入高消費力、高品牌敏感度的國際都會市場。</span>
+        <span class="b-tz" role="cell">GMT+8</span>
+      </div>
+      <div class="b-row" role="row">
+        <span class="b-code" role="cell">SEA</span>
+        <span class="b-name" role="cell"><b>東南亞市場</b><small>SOUTHEAST ASIA</small></span>
+        <span class="b-desc" role="cell">透過吉隆坡在地團隊與多語系運營，協助品牌在多元文化、高成長的新興市場建立先發優勢。</span>
+        <span class="b-tz" role="cell">GMT+7／+8</span>
+      </div>
+      <div class="b-row" role="row">
+        <span class="b-code" role="cell">GLOBAL</span>
+        <span class="b-name" role="cell"><b>跨國多市場</b><small>MULTI-MARKET</small></span>
+        <span class="b-desc" role="cell">以單一策略框架統籌多市場佈局，兼顧品牌一致性與在地彈性，讓跨國擴張的每一步都建立在已驗證的基礎上。</span>
+        <span class="b-tz" role="cell">MULTI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 Solutions -->
+<section class="sec" id="solutions">
+  <div class="wrap">
+    <div class="shead">
+      <p class="rail rv">SOLUTIONS</p>
+      <div>
+        <h2 class="h2 rv">我們的解決方案</h2>
+        <p class="sub rv">跨境品牌增長所需的完整拼圖</p>
+      </div>
+    </div>
+    <div class="sol3 rv">
+      <article class="sol">
+        <div class="sol-top"><span class="en">MARKET ENTRY</span><a class="go" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E5%B8%82%E5%A0%B4%E9%80%B2%E5%85%A5" aria-label="洽詢市場進入服務">→</a></div>
+        <h3>市場進入</h3>
+        <p class="one">從市場選擇到首波聲量，協助品牌以最低的試錯成本完成在地化落地。</p>
+        <ul>
+          <li>市場選擇與可行性評估</li>
+          <li>競品與通路結構分析</li>
+          <li>在地化定位與溝通策略</li>
+          <li>首波聲量佈局</li>
+          <li>落地行動計畫</li>
+        </ul>
+      </article>
+      <article class="sol">
+        <div class="sol-top"><span class="en">GROWTH</span><a class="go" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E4%BC%81%E6%A5%AD%E5%A2%9E%E9%87%8F" aria-label="洽詢企業增量服務">→</a></div>
+        <h3>企業增量</h3>
+        <p class="one">串連全漏斗成長策略，將流量、轉換與回購整合為可持續的增量引擎。</p>
+        <ul>
+          <li>全漏斗成長策略</li>
+          <li>廣告投放與轉換優化</li>
+          <li>KOL 口碑 × SEO・GEO 佈局</li>
+          <li>CRM 留存與回購經營</li>
+        </ul>
+      </article>
+      <article class="sol">
+        <div class="sol-top"><span class="en">AI ENABLEMENT</span><a class="go" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9AAI%20%E8%B3%A6%E8%83%BD%E7%B3%BB%E7%B5%B1" aria-label="洽詢 AI 賦能系統服務">→</a></div>
+        <h3>AI 賦能系統</h3>
+        <p class="one">將 AI 深度導入行銷產線，讓團隊從產出轉向判斷，組織越用越聰明。</p>
+        <ul>
+          <li>行銷工作流診斷</li>
+          <li>AI 產線與審核機制</li>
+          <li>品牌知識庫沉澱</li>
+          <li>團隊培訓與導入陪跑</li>
+        </ul>
+      </article>
+    </div>
+    <p class="sec-note rv">服務市場涵蓋台灣、港澳與東南亞，其他國際市場可依專案評估。</p>
+  </div>
+</section>
+
+<!-- 5 Advantage -->
+<section class="sec sec-mist" id="advantage">
+  <div class="wrap">
+    <div class="shead">
+      <p class="rail rv">ADVANTAGE</p>
+      <div>
+        <h2 class="h2 rv">我們的在地實戰優勢</h2>
+        <p class="sub rv">Eastbright Global 是一間以在地實戰為基礎的跨境行銷公司。我們的市場判斷皆來自第一線的實地操作，而非遠端的資料推演；團隊分駐台灣與吉隆坡，並持續在 AI 產品端操盤行銷。</p>
+      </div>
+    </div>
+
+    <div class="stats3 rv">
+      <div class="st"><b>500+</b><span>創作者網絡</span><small>CREATOR NETWORK</small></div>
+      <div class="st"><b>3</b><span>大區域市場</span><small>REGIONAL MARKETS</small></div>
+      <div class="st"><b>2</b><span>地實地團隊</span><small>ON-THE-GROUND TEAMS</small></div>
+    </div>
+
+    <div class="pils">
+      <article class="pil rv">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+            <circle cx="40" cy="40" r="22"/><circle cx="40" cy="40" r="12"/>
+            <path d="M40 40 55.5 24.5"/><circle cx="40" cy="40" r="3.6" fill="#101112" stroke="none"/>
+          </svg>
+        </div>
+        <span class="en">MARKET INTELLIGENCE</span>
+        <h3>判斷該不該進、先進哪裡的市場洞察</h3>
+        <p>我們整合競品動態、通路結構、消費者行為與法規環境，產出可執行的市場優先順序建議，也明確指出現階段不建議進入的市場。</p>
+      </article>
+      <article class="pil rv">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 19a8.5 8.5 0 0 1 8.5 8.5c0 6.6-8.5 13.8-8.5 13.8S19.5 34.1 19.5 27.5A8.5 8.5 0 0 1 28 19z"/>
+            <circle cx="28" cy="27.5" r="2.8" fill="#101112" stroke="none"/>
+            <path d="M54 36a8.5 8.5 0 0 1 8.5 8.5c0 6.6-8.5 13.8-8.5 13.8s-8.5-7.2-8.5-13.8A8.5 8.5 0 0 1 54 36z"/>
+            <circle cx="54" cy="44.5" r="2.8" fill="#101112" stroke="none"/>
+            <path d="M35 45q8.5 6.5 14 2.5" stroke-dasharray="3 4.5"/>
+          </svg>
+        </div>
+        <span class="en">LOCALIZATION</span>
+        <h3>在當地被聽懂、被信任的在地化落地</h3>
+        <p>我們在台灣與吉隆坡擁有實地團隊，能直接進行測試與驗證，並串連 500+ 位知識型與科技型創作者，建立用預算買不到的信任網絡。</p>
+      </article>
+      <article class="pil rv">
+        <div class="ico" aria-hidden="true">
+          <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.4">
+            <circle cx="40" cy="40" r="23"/>
+            <circle cx="40" cy="40" r="13.5" stroke-dasharray="3.5 5"/>
+            <circle cx="40" cy="40" r="4.5" fill="#101112" stroke="none"/>
+          </svg>
+        </div>
+        <span class="en">AI ENABLEMENT</span>
+        <h3>讓策略與執行持續優化的 AI 行銷產線</h3>
+        <p>我們每天在 AI 產品端操盤行銷，將 AI 導入產出流程、把人留在判斷點，並將每一次決策沉澱為可跨市場複製的組織資產。</p>
+      </article>
+    </div>
+
+    <h3 class="team-h rv">創始團隊</h3>
+    <div class="team">
+      <article class="fd rv">
+        <div class="fd-code" aria-hidden="true">TW</div>
+        <div>
+          <p class="fd-name">Yvonne Wang</p>
+          <p class="fd-role">共同創辦人．行銷成長顧問<span class="loc">台灣</span></p>
+          <p class="fd-bio">十年整合行銷經驗，專長台灣市場的成長策略與落地執行。操盤過電商、零售、實體門市，以及海外 AI 工具產品的台灣本土化，涵蓋廣告投放、創作者合作、會員經營與數據分析。擅長將年度目標拆解為每月可執行的行動，並持續將 AI 導入自身的行銷工作流。負責台灣市場業務與執行體系。</p>
+          <div class="ftags"><span>品牌策略</span><span>數位行銷</span><span>廣告投放</span><span>企業拓展</span><span>AI 行銷工作流</span></div>
+        </div>
+      </article>
+      <article class="fd rv">
+        <div class="fd-code" aria-hidden="true">KL</div>
+        <div>
+          <p class="fd-name">S Wang</p>
+          <p class="fd-role">共同創辦人．跨境市場顧問<span class="loc">吉隆坡</span></p>
+          <p class="fd-bio">十年科技與消費品牌行銷經驗，長期操作亞洲的雙向跨境市場。做過中國品牌出海的市場選擇與在地化定位、國際服飾品牌的 APAC 社群運營，以及 AI 產品的亞洲市場推廣——多語言、多市場、從零建立在地溝通。常駐吉隆坡，往返新加坡與台灣，負責市場進入策略與東南亞業務。</p>
+          <div class="ftags"><span>跨境市場策略</span><span>品牌出海</span><span>APAC 社群運營</span><span>多市場在地化</span><span>AI 產品行銷</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="ticket rv" id="diagnostic">
+      <div class="t-main">
+        <span class="t-tag">入門方案</span>
+        <h3>跨境品牌檢測</h3>
+        <p class="d">三個工作天，先看清楚這個市場值不值得進。適合正在評估「要不要進」或「先進哪一個市場」的品牌。</p>
+        <ul>
+          <li><b>市場優先順序建議</b></li>
+          <li><b>競品與通路結構掃描</b></li>
+          <li><b>在地化風險清單</b>——什麼不能照搬</li>
+          <li><b>首年預算量級參考</b></li>
+          <li><b>失敗條件</b>——什麼情況下我們建議您不要進</li>
+          <li><b>30 分鐘線上解讀會議</b></li>
+        </ul>
+      </div>
+      <div class="t-stub">
+        <span class="t-pass">ENTRY PASS · 跨境品牌檢測</span>
+        <div class="t-price"><b>NT$8,800</b><span>3 個工作天交付</span></div>
+        <p class="t-fine"><b>三個月內啟動後續合作，費用全額折抵。</b>不含執行與後續陪跑。</p>
+        <a class="btn btn-lime" href="mailto:vivian30427850605@gmail.com?subject=%E9%A0%90%E7%B4%84%EF%BC%9A%E8%B7%A8%E5%A2%83%E5%93%81%E7%89%8C%E6%AA%A2%E6%B8%AC">預約檢測 <span class="arr">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 Insights -->
+<section class="sec" id="insights">
+  <div class="wrap">
+    <div class="shead">
+      <p class="rail rv">INSIGHTS</p>
+      <h2 class="h2 rv">Eastbright 案例與洞察</h2>
+    </div>
+    <div class="ins-grid">
+      <div class="cases">
+        <article class="case rv">
+          <div class="vis vis-ink"><b>TW</b><small>MARKET ENTRY</small></div>
+          <div class="case-b">
+            <div class="meta"><span class="t-case">案例</span><span class="m">進入台灣</span></div>
+            <h3>海外 AI 工具品牌進入台灣：從找對創作者開始，建立完整的落地路徑</h3>
+            <p>在海外已具基礎的 AI 工具品牌進入台灣市場。我們從知識型與科技型創作者佈局切入，整合口碑、廣告投放與社群經營，建立從認知到轉換的完整在地路徑。</p>
+          </div>
+        </article>
+        <article class="case rv">
+          <div class="vis vis-lime"><b>APAC</b><small>LOCALIZATION</small></div>
+          <div class="case-b">
+            <div class="meta"><span class="t-case">案例</span><span class="m">東南亞在地</span></div>
+            <h3>國際服飾品牌的 APAC 在地運營：多語言、多市場，從零建立品牌聲音</h3>
+            <p>協助國際服飾品牌在亞太區域建立在地社群運營，以多語言內容與多市場節奏並行，從零建立當地的品牌溝通與聲量。</p>
+          </div>
+        </article>
+      </div>
+      <div class="ins-list">
+        <article class="ins rv">
+          <span class="t-ins">洞察</span>
+          <h3>品牌出海，該先進哪一個市場？</h3>
+          <p>順序選錯時，執行力只會把錯誤放大得更快。我們的第一份交付通常是市場優先順序建議，包含暫時不建議進入的市場與理由。</p>
+        </article>
+        <article class="ins rv">
+          <span class="t-ins">洞察</span>
+          <h3>跨境行銷，什麼能照搬、什麼必須重做？</h3>
+          <p>產品價值主張通常能跨市場共用，溝通語彙則幾乎都要重寫。分清楚兩者的界線，是跨境行銷最省錢的一步。</p>
+        </article>
+        <article class="ins rv">
+          <span class="t-ins">洞察</span>
+          <h3>進入港澳，和進入台灣有什麼不同？</h3>
+          <p>同樣使用繁體中文，港澳卻是雙語並行、節奏更快、品牌敏感度更高的都會市場。在台灣有效的溝通語彙與通路組合，往往需要重新校準。</p>
+        </article>
+        <article class="ins rv">
+          <span class="t-ins">洞察</span>
+          <h3>AI 讓產出變便宜，為什麼判斷反而變貴？</h3>
+          <p>當每個團隊都能一天產出十版素材，瓶頸就從產能移到「知道哪一版該投」。我們把 AI 放進產線，把人留在判斷點。</p>
+        </article>
+      </div>
+    </div>
+    <p class="more rv"><span class="lb">MORE</span>更多合作經驗：<b>亞洲消費品牌</b>全球化出海<i>・</i><b>台灣女性服飾</b>會員經營與 OMO 通路<i>・</i><b>運動機能服飾</b>獲客成長<i>・</i><b>質感文具選品</b>內容經營</p>
+    <p class="note rv">為保護客戶，案例以產業別呈現；實際品牌名稱、成效數據與做法細節，可於諮詢時說明。</p>
+  </div>
+</section>
+
+<!-- 7 FAQ -->
+<section class="sec sec-mist" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <p class="rail rv">FAQ</p>
+      <h2 class="h2 rv">Eastbright<br>合作如何開始？</h2>
+      <p class="side-note rv">沒有看到您的問題？<a href="#contact">直接與我們聯絡 →</a></p>
+    </div>
+    <div class="faq">
+      <details class="rv">
+        <summary><span class="num">01</span><span class="q">Eastbright Global 提供哪些服務？我的品牌該從哪一項開始？</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans">Eastbright Global 提供跨國跨境品牌整合行銷的完整解決方案。如果您正在評估「要不要進」或「先進哪一個市場」，<a href="#diagnostic">跨境品牌檢測</a>會是最適合的起點——三個工作天、NT$8,800，三個月內啟動後續合作可全額折抵。如果您已確定目標市場、準備首度進入或重新定位，<b>落地專案</b>能在明確的時程內完成市場進入策略與首波佈局。若您希望在台灣、港澳或東南亞長期經營，<b>整合顧問月費</b>能持續推進企業增量與 AI 賦能。專案與月費方案依範疇報價，將於諮詢時提供。還不確定嗎？歡迎與我們聯繫。</div>
+      </details>
+      <details class="rv">
+        <summary><span class="num">02</span><span class="q">進入一個新市場通常需要多久？該如何開始？</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans">合作從一次 30 分鐘的線上諮詢開始，第一次諮詢不收費。接著我們會提出明確的範疇、時程與交付物，並誠實說明哪些事現階段還太早。進入執行後，<b>廣告與轉換類指標通常在一到兩個月內開始變化，口碑與自然流量等累積型資產則一般需要三到六個月</b>才會出現明顯斜率。我們每月固定召開對焦會議，每季檢視品牌搜尋量、AI 引用狀況與回購率等長期指標。</div>
+      </details>
+      <details class="rv">
+        <summary><span class="num">03</span><span class="q">我們團隊沒有海外市場經驗，這樣還適合合作嗎？</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans">非常適合，這也是我們最常協助的狀況。Eastbright Global 的團隊分駐台灣與吉隆坡，能在當地直接進行測試與驗證，市場判斷不依賴遠端資料推演。<b>您只需提供產品知識與決策權</b>，在地市場的洞察、溝通與創作者網絡由我們補足。</div>
+      </details>
+      <details class="rv">
+        <summary><span class="num">04</span><span class="q">我們的品牌資料與商業機密如何受到保護？</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans">合作前我們可依您的需求簽署保密協議（NDA）。<b>品牌資料僅用於該專案本身</b>，不會用於其他客戶或對外揭露；導入 AI 工具時，我們也會依您的資料政策調整使用方式，涉及敏感資訊的環節維持人工處理。</div>
+      </details>
+      <details class="rv">
+        <summary><span class="num">05</span><span class="q">我可以預期哪些可衡量的成果？ROI 如何追蹤？</span><span class="ic" aria-hidden="true"></span></summary>
+        <div class="ans">我們將成果分為三個層次追蹤：<b>短期</b>看獲客成本、轉換率與廣告投報；<b>中期</b>看回購率與客戶終身價值；<b>長期</b>看品牌搜尋量、自然流量佔比與在 AI 回答中的出現率。合作初期即建立追蹤架構與數據儀表板，讓每一分行銷投資都對應明確的商業成果。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 8 Contact -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="cta-grid">
+      <div>
+        <p class="rail rv">CONTACT</p>
+        <h2 class="cta-h rv">聯絡我們</h2>
+        <p class="sub rv">了解 Eastbright Global 如何協助您的品牌跨越市場邊界</p>
+        <p class="body rv">第一次諮詢以 30 分鐘線上進行，不收費。請告訴我們您的產品與目標市場，我們將直接提供初步判斷——包含「現階段還不適合進入」這樣的結論。</p>
+        <div class="cta-btns rv">
+          <a class="btn btn-ink" href="mailto:vivian30427850605@gmail.com?subject=%E9%A0%90%E7%B4%84%E8%AB%AE%E8%A9%A2">預約諮詢 <span class="arr">→</span></a>
+          <a class="btn btn-line" href="#diagnostic">跨境品牌檢測 <span class="arr">→</span></a>
+        </div>
+      </div>
+      <a class="ring-btn rv" href="mailto:vivian30427850605@gmail.com?subject=%E9%A0%90%E7%B4%84%E8%AB%AE%E8%A9%A2" aria-label="寄信預約諮詢">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="ringp" d="M60,60 m-45,0 a45,45 0 1,1 90,0 a45,45 0 1,1 -90,0"/></defs>
+          <circle cx="60" cy="60" r="58" fill="#101112"/>
+          <g class="spin">
+            <text font-size="8.6" font-weight="700" letter-spacing="2.4" fill="#C9F73D" font-family="IBM Plex Mono, monospace">
+              <textPath href="#ringp">BOOK A CALL · 預約諮詢 · BOOK A CALL · 預約諮詢 · </textPath>
+            </text>
+          </g>
+          <g class="ar"><path d="M50 70 L70 50 M55 50 h15 v15" stroke="#C9F73D" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        </svg>
+      </a>
+    </div>
+    <div class="cta-rows rv">
+      <a class="crow" href="tel:0918826803"><span class="k">PHONE</span><span class="v">0918-826-803</span></a>
+      <a class="crow" href="mailto:vivian30427850605@gmail.com"><span class="k">EMAIL</span><span class="v">vivian30427850605@gmail.com</span></a>
+      <div class="crow"><span class="k">LINE</span><span class="v">vivian30427</span></div>
+      <div class="crow"><span class="k">OFFICE</span><span class="v">台灣　·　吉隆坡<small>GMT+8</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 Footer -->
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="ft-brand"><i aria-hidden="true"></i>EASTBRIGHT GLOBAL</div>
+        <p class="ft-tag">Infinite growth, from the East</p>
+        <p class="ft-about">Eastbright Global 致力於協助品牌跨越市場邊界，在陌生市場真正落地並持續增長。我們透過結合在地實戰洞察與 AI 賦能系統，引導品牌從「產品力」邁向「市場力」，並提供跨國跨境品牌整合行銷的完整解決方案。團隊分駐台灣與吉隆坡，服務範圍涵蓋台灣、港澳與東南亞市場。</p>
+      </div>
+      <div>
+        <h4>SOLUTIONS</h4>
+        <ul>
+          <li><a href="#solutions">市場進入</a></li>
+          <li><a href="#solutions">企業增量</a></li>
+          <li><a href="#solutions">AI 賦能系統</a></li>
+          <li><a href="#diagnostic">跨境品牌檢測</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>EASTBRIGHT</h4>
+        <ul>
+          <li><a href="#markets">跨境市場佈局</a></li>
+          <li><a href="#advantage">在地實戰優勢</a></li>
+          <li><a href="#insights">案例與洞察</a></li>
+          <li><a href="#faq">常見問題</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-mark" aria-hidden="true">EASTBRIGHT</div>
+    <div class="ft-bot">
+      <span>© 2026 Eastbright Global. All Rights Reserved.</span>
+      <span>TW · KL — GMT+8</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(btn){
+  const l=document.getElementById('navLinks');
+  btn.setAttribute('aria-expanded',l.classList.toggle('open'));
+}
+document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+}));
+const strip=document.getElementById('strip');
+if(strip) strip.innerHTML+=strip.innerHTML;
+
+function tick(){
+  try{
+    const t=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false,timeZone:'Asia/Taipei'}).format(new Date());
+    document.querySelectorAll('[data-clock]').forEach(e=>e.textContent=t);
+  }catch(_){}
+}
+tick();setInterval(tick,20000);
+
+const io=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target;
+    const sib=[...el.parentElement.children].filter(c=>c.classList.contains('rv'));
+    el.style.transitionDelay=(Math.max(sib.indexOf(el),0)*0.07)+'s';
+    el.classList.add('in');
+    io.unobserve(el);
+  });
+},{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('stuck',scrollY>40),{passive:true});
+</script>
+</body>
+</html>
