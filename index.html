@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eastbright Global｜跨國跨境品牌整合行銷 × AI 賦能</title>
-<meta name="description" content="Eastbright Global 提供市場策略、FB／IG／Threads／小紅書海外媒體營運、Meta／Google 廣告投放與海外跨境 KOL/KOC 行銷營運，以 AI 賦能系統協助品牌進入台灣、港澳與東南亞市場，在陌生市場真正落地並持續增長。">
+<meta name="description" content="Eastbright Global 提供市場策略診斷、海外整合行銷（Facebook、Instagram、Threads、小紅書社群運營與 PR）、Meta／Google 廣告投放與海外 KOL/KOC 網紅合作，以 AI 賦能系統協助品牌進入台灣、港澳與東南亞市場，在陌生市場真正落地並持續增長。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -33,6 +33,7 @@ html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{background:var(--paper);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.85;
   -webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
+p,li{text-wrap:pretty}
 ::selection{background:var(--lime);color:var(--ink)}
 :focus-visible{outline:3px solid var(--lime-deep);outline-offset:3px}
 .wrap{max-width:1200px;margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
@@ -153,7 +154,7 @@ a{color:inherit;text-decoration:none}
 .svc-idx a{display:flex;align-items:baseline;gap:.65rem;padding:1.05rem 1rem 0 0;font-weight:800;
   font-size:clamp(.88rem,1.2vw,1rem);color:#fff;transition:color .2s}
 .svc-idx a .lbl{min-width:0}
-.svc-idx a span:first-child{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;color:var(--lime)}
+.svc-idx a > span:first-child{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;color:var(--lime)}
 .svc-idx a:hover{color:var(--lime)}
 
 /* ---------- 2 Services：四大核心服務（全站主角） ---------- */
@@ -191,14 +192,14 @@ a{color:inherit;text-decoration:none}
 .tile.lime .tile-cta .arr{background:var(--ink);color:var(--lime)}
 .tile:hover .tile-cta .arr{transform:rotate(-45deg)}
 
-.ai-band{margin-top:1.2rem;display:grid;grid-template-columns:auto minmax(0,1.3fr) minmax(0,1fr);gap:1.2rem 2.2rem;
+.ai-band{margin-bottom:1.2rem;display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem 2rem;
   align-items:center;padding:1.5rem 1.8rem;border:1.5px solid var(--ink);background:var(--mist)}
 .ai-tag{display:inline-flex;align-items:center;gap:.55rem;background:var(--lime);border:1.5px solid var(--ink);
   padding:.5rem 1.1rem;border-radius:999px;font-weight:900;font-size:1.02rem;white-space:nowrap}
 .ai-tag .x{font-family:var(--mono);font-weight:600}
-.ai-band p{font-size:.92rem;line-height:1.8}
-.ai-band .solo{font-size:.84rem;color:var(--ink-70)}
-.ai-band .solo b{display:block;margin-bottom:.2rem;font-family:var(--mono);font-size:.64rem;font-weight:500;letter-spacing:.14em;color:var(--ink-45)}
+.ai-list{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 0;font-weight:800;font-size:clamp(.92rem,1.3vw,1.05rem);line-height:1.6}
+.ai-list li{white-space:nowrap}
+.ai-list li+li::before{content:"・";color:var(--ink-45);margin:0 .35rem}
 .sec-note{margin-top:1.4rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--ink-45)}
 
 /* ---------- 5 Advantage ---------- */
@@ -443,17 +444,17 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       <span class="stop end"><span class="node" aria-hidden="true"></span><span class="word pill">增長</span><small aria-hidden="true">03 · GROW</small></span>
     </h1>
     <div class="hero-foot rv">
-      <p class="hero-sub">我們提供跨國跨境品牌整合行銷與 AI 賦能系統，協助品牌全球化，讓品牌在陌生市場真正落地，從在地洞察中釋放可持續的增長價值。</p>
+      <p class="hero-sub">提供跨國跨境品牌整合行銷，協助品牌全球化，讓品牌在陌生市場真正落地，從在地洞察中釋放可持續的增長價值。</p>
       <div class="hero-cta">
         <a class="btn btn-lime" href="#contact">預約諮詢 <span class="arr">→</span></a>
         <a class="btn btn-ghost-dark" href="#diagnostic">跨境品牌檢測 <span class="arr">→</span></a>
       </div>
     </div>
     <nav class="svc-idx rv" aria-label="四大核心服務">
-      <a href="#svc-1"><span>01</span><span class="lbl"><span class="nw">市場策略</span></span></a>
-      <a href="#svc-2"><span>02</span><span class="lbl"><span class="nw">海外媒體</span><span class="nw">營運</span></span></a>
+      <a href="#svc-1"><span>01</span><span class="lbl"><span class="nw">市場策略</span><span class="nw">診斷</span></span></a>
+      <a href="#svc-2"><span>02</span><span class="lbl"><span class="nw">海外</span><span class="nw">整合行銷</span></span></a>
       <a href="#svc-3"><span>03</span><span class="lbl"><span class="nw">Meta／Google</span> <span class="nw">廣告投放</span></span></a>
-      <a href="#svc-4"><span>04</span><span class="lbl"><span class="nw">海外跨境</span> <span class="nw">KOL/KOC</span> <span class="nw">行銷營運</span></span></a>
+      <a href="#svc-4"><span>04</span><span class="lbl"><span class="nw">海外</span> <span class="nw">KOL/KOC</span> <span class="nw">網紅合作</span></span></a>
     </nav>
   </div>
 </header>
@@ -466,13 +467,17 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       <p class="rail rv">SERVICES</p>
       <div>
         <h2 class="h2 rv"><span class="nw hl">一站式</span><span class="nw">跨境市場</span><span class="nw">行銷服務</span></h2>
-        <p class="sub rv">四大核心服務，涵蓋跨境品牌從市場策略、海外媒體、廣告投放到 KOL/KOC 口碑的完整拼圖——可單獨啟動，也能彈性組合。</p>
+        <p class="sub rv">四大核心服務，涵蓋跨境品牌從市場策略診斷、海外整合行銷、廣告投放到 KOL/KOC 網紅合作的完整拼圖——可單獨啟動，也能彈性組合。</p>
       </div>
+    </div>
+    <div class="ai-band rv" id="ai">
+      <span class="ai-tag"><span class="x">×</span>AI 賦能系統</span>
+      <ul class="ai-list"><li>行銷工作流診斷</li><li>AI 產線與審核機制建置</li><li>品牌知識庫建置</li><li>團隊培訓與導入陪跑</li></ul>
     </div>
     <div class="svc4">
       <article class="tile ink rv" id="svc-1">
         <div class="tile-top"><span class="i">01</span><span>MARKET &amp; BRAND STRATEGY</span></div>
-        <h3>市場策略</h3>
+        <h3>市場策略診斷</h3>
         <p class="also">競品分析・在地化品牌策略</p>
         <p class="val">看清市場、拆解競品，把品牌翻譯成當地人聽得懂、也願意買單的語言，為品牌找到在新市場勝出的位置。</p>
         <ul>
@@ -481,20 +486,20 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
           <li>在地化品牌定位與溝通策略</li>
           <li>品牌訊息架構與在地語彙</li>
         </ul>
-        <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E5%B8%82%E5%A0%B4%E7%AD%96%E7%95%A5" aria-label="洽詢市場策略服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
+        <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E5%B8%82%E5%A0%B4%E7%AD%96%E7%95%A5%E8%A8%BA%E6%96%B7" aria-label="洽詢市場策略診斷服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
       <article class="tile lime rv" id="svc-2">
-        <div class="tile-top"><span class="i">02</span><span>OVERSEAS SOCIAL MEDIA</span></div>
-        <h3>海外媒體營運</h3>
-        <p class="also">FB／IG／Threads／小紅書</p>
-        <p class="val">以當地語言與節奏經營 FB、IG、Threads 與小紅書，累積品牌聲量與口碑，成為消費者做決定前最先看見的印象。</p>
+        <div class="tile-top"><span class="i">02</span><span>INTEGRATED MARKETING</span></div>
+        <h3>海外整合行銷</h3>
+        <p class="also">海外社媒運營／社群口碑／PR</p>
+        <p class="val">以當地語言和節日策略經營社群媒體，累積品牌聲量與口碑，成為消費者做決定前最先看見的印象。</p>
         <ul>
-          <li>FB／IG 在地社群經營</li>
-          <li>Threads 話題與聲量操作</li>
-          <li>小紅書種草筆記佈局</li>
-          <li>社群內容企劃與輿情監測</li>
+          <li>Facebook／Instagram 在地社群經營</li>
+          <li>Threads 話題經營與小紅書種草佈局</li>
+          <li>社群口碑經營與輿情監測</li>
+          <li>公關（PR）與媒體曝光</li>
         </ul>
-        <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E6%B5%B7%E5%A4%96%E5%AA%92%E9%AB%94%E7%87%9F%E9%81%8B" aria-label="洽詢海外媒體營運服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
+        <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E6%B5%B7%E5%A4%96%E6%95%B4%E5%90%88%E8%A1%8C%E9%8A%B7" aria-label="洽詢海外整合行銷服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
       <article class="tile lime rv" id="svc-3">
         <div class="tile-top"><span class="i">03</span><span>PERFORMANCE ADS</span></div>
@@ -510,23 +515,18 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
         <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9AMeta%EF%BC%8FGoogle%20%E5%BB%A3%E5%91%8A%E6%8A%95%E6%94%BE" aria-label="洽詢 Meta／Google 廣告投放服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
       <article class="tile ink rv" id="svc-4">
-        <div class="tile-top"><span class="i">04</span><span>CROSS-BORDER KOL / KOC</span></div>
-        <h3><span class="nw">海外跨境</span><br><span class="nw">KOL/KOC</span> <span class="nw">行銷營運</span></h3>
+        <div class="tile-top"><span class="i">04</span><span>OVERSEAS KOL / KOC</span></div>
+        <h3><span class="nw">海外</span> <span class="nw">KOL/KOC</span><br><span class="nw">網紅合作</span></h3>
         <p class="also">知識型與科技型創作者網絡</p>
-        <p class="val">以長期經營的跨境創作者關係，在目標市場建立別人用預算買不到的信任與口碑，從聲量一路接到轉換。</p>
+        <p class="val">為高決策門檻產品，媒合具備產業理解力的知識型創作者。以深度內容取代單純曝光，在目標市場建立信任，將關注轉化為實際用戶。</p>
         <ul>
           <li>KOL／KOC 篩選與媒合</li>
           <li>合作企劃與內容腳本</li>
           <li>聯盟行銷策動與聯名活動</li>
           <li>聲量與成效追蹤</li>
         </ul>
-        <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E6%B5%B7%E5%A4%96%E8%B7%A8%E5%A2%83%20KOL/KOC%20%E8%A1%8C%E9%8A%B7%E7%87%9F%E9%81%8B" aria-label="洽詢海外跨境 KOL/KOC 行銷營運服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
+        <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E6%B5%B7%E5%A4%96%20KOL/KOC%20%E7%B6%B2%E7%B4%85%E5%90%88%E4%BD%9C" aria-label="洽詢海外 KOL/KOC 網紅合作服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
-    </div>
-    <div class="ai-band rv" id="ai">
-      <span class="ai-tag"><span class="x">×</span>AI 賦能系統</span>
-      <p>四大服務皆由 AI 行銷產線驅動：產出更快、測試更多，每一次判斷都沉澱為組織的知識資產，不會隨著人員離開而消失。</p>
-      <p class="solo"><b>ALSO AVAILABLE</b>可單獨導入：行銷工作流診斷・AI 產線與審核機制・品牌知識庫・團隊培訓陪跑</p>
     </div>
     <p class="sec-note rv">服務市場涵蓋台灣、港澳與東南亞，其他國際市場可依專案評估。</p>
   </div>
@@ -546,7 +546,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
         </div>
         <figure class="rv">
           <div class="eq" role="img" aria-label="四大核心服務乘以 AI 賦能系統，等於可持續的在地增長">
-            <div class="eq-4"><span>市場策略</span><span>海外媒體</span><span>廣告投放</span><span>KOL/KOC 營運</span></div>
+            <div class="eq-4"><span>市場策略診斷</span><span>海外整合行銷</span><span>廣告投放</span><span>KOL/KOC <span class="nw">網紅合作</span></span></div>
             <div class="eq-op">×</div>
             <div class="eq-ai">AI 賦能系統</div>
             <div class="eq-op">=</div>
@@ -674,7 +674,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
         <div>
           <p class="fd-name">S Wang</p>
           <p class="fd-role">共同創辦人．跨境市場顧問<span class="loc">吉隆坡</span></p>
-          <p class="fd-bio">十年科技與消費品牌行銷經驗，長期操作亞洲的雙向跨境市場。做過中國品牌出海的市場選擇與在地化定位、國際服飾品牌的 APAC 社群運營，以及 AI 產品的亞洲市場推廣——多語言、多市場、從零建立在地溝通。常駐吉隆坡，往返新加坡與台灣，負責市場進入策略與東南亞業務。</p>
+          <p class="fd-bio">十年科技與國際品牌行銷經驗，歷經上海、香港到吉隆坡，深耕亞洲雙向跨境市場。經手多個中國品牌出海、國際服飾品牌 APAC 營運，以及 AI 產品亞洲市場推廣，具備從零建立多語言、多市場在地溝通的實戰經驗。現常駐吉隆坡，往返新加坡與台灣，負責市場進入策略與東南亞業務。</p>
           <div class="ftags"><span>跨境市場策略</span><span>品牌出海</span><span>APAC 社群運營</span><span>多市場在地化</span><span>AI 產品行銷</span></div>
         </div>
       </article>
@@ -684,19 +684,19 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       <div class="t-main">
         <span class="t-tag">入門方案</span>
         <h3>跨境品牌檢測</h3>
-        <p class="d">三個工作天，先看清楚這個市場值不值得進。適合正在評估「要不要進」或「先進哪一個市場」的品牌。</p>
+        <p class="d">7 個工作天，先看清楚這個市場值不值得進。適合正在評估「要不要進」或「先進哪一個市場」的品牌。</p>
         <ul>
-          <li><b>市場優先順序建議</b></li>
+          <li><b>市場行銷策略與優先順序建議</b></li>
           <li><b>競品與通路結構掃描</b></li>
           <li><b>在地化風險清單</b>——什麼不能照搬</li>
-          <li><b>首年預算量級參考</b></li>
+          <li><b>合作形式建議</b></li>
           <li><b>失敗條件</b>——什麼情況下我們建議您不要進</li>
           <li><b>專人線上解讀會議</b></li>
         </ul>
       </div>
       <div class="t-stub">
         <span class="t-pass">ENTRY PASS · 跨境品牌檢測</span>
-        <div class="t-price"><b>NT$8,800</b><span>3 個工作天交付</span></div>
+        <div class="t-price"><b>NT$8,800</b><span>7 個工作天交付</span></div>
         <p class="t-fine"><b>三個月內啟動後續合作，費用全額折抵。</b>不含執行與後續陪跑。</p>
         <a class="btn btn-lime" href="mailto:vivian30427850605@gmail.com?subject=%E9%A0%90%E7%B4%84%EF%BC%9A%E8%B7%A8%E5%A2%83%E5%93%81%E7%89%8C%E6%AA%A2%E6%B8%AC">預約檢測 <span class="arr">→</span></a>
       </div>
@@ -769,7 +769,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
     <div class="faq">
       <details class="rv">
         <summary><span class="num">01</span><span class="q">Eastbright Global 提供哪些服務？我的品牌該從哪一項開始？</span><span class="ic" aria-hidden="true"></span></summary>
-        <div class="ans">Eastbright Global 提供四大核心服務：<a href="#services">市場策略、海外媒體營運、Meta／Google 廣告投放與海外跨境 KOL/KOC 行銷營運</a>。如果您正在評估「要不要進」或「先進哪一個市場」，<a href="#diagnostic">跨境品牌檢測</a>會是最適合的起點——三個工作天、NT$8,800，三個月內啟動後續合作可全額折抵。如果您已確定目標市場、準備首度進入或重新定位，<b>落地專案</b>能在明確的時程內完成市場進入策略與首波佈局。若您希望在台灣、港澳或東南亞長期經營，<b>整合顧問月費</b>能持續推進海外媒體營運、廣告投放與 KOL/KOC 行銷營運，並導入 AI 賦能系統。專案與月費方案依範疇報價，將於諮詢時提供。還不確定嗎？歡迎與我們聯繫。</div>
+        <div class="ans">Eastbright Global 提供四大核心服務：<a href="#services">市場策略診斷、海外整合行銷、Meta／Google 廣告投放與海外 KOL/KOC 網紅合作</a>。如果您正在評估「要不要進」或「先進哪一個市場」，<a href="#diagnostic">跨境品牌檢測</a>會是最適合的起點——7 個工作天、NT$8,800，三個月內啟動後續合作可全額折抵。如果您已確定目標市場、準備首度進入或重新定位，<b>落地專案</b>能在明確的時程內完成市場進入策略與首波佈局。若您希望在台灣、港澳或東南亞長期經營，<b>整合顧問月費</b>能持續推進海外整合行銷、廣告投放與 KOL/KOC 網紅合作，並導入 AI 賦能系統。專案與月費方案依範疇報價，將於諮詢時提供。還不確定嗎？歡迎與我們聯繫。</div>
       </details>
       <details class="rv">
         <summary><span class="num">02</span><span class="q">進入一個新市場通常需要多久？該如何開始？</span><span class="ic" aria-hidden="true"></span></summary>
@@ -839,10 +839,10 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       <div>
         <h4>SERVICES</h4>
         <ul>
-          <li><a href="#svc-1">市場策略</a></li>
-          <li><a href="#svc-2">海外媒體營運</a></li>
+          <li><a href="#svc-1">市場策略診斷</a></li>
+          <li><a href="#svc-2">海外整合行銷</a></li>
           <li><a href="#svc-3">Meta／Google 廣告投放</a></li>
-          <li><a href="#svc-4">海外跨境 KOL/KOC 行銷營運</a></li>
+          <li><a href="#svc-4">海外 KOL/KOC 網紅合作</a></li>
           <li><a href="#ai">AI 賦能系統</a></li>
           <li><a href="#diagnostic">跨境品牌檢測</a></li>
         </ul>
