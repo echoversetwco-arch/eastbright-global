@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eastbright Global｜跨國跨境品牌整合行銷 × AI 賦能</title>
-<meta name="description" content="Eastbright Global 提供市場策略診斷、海外整合行銷（Facebook、Instagram、Threads、小紅書社群運營與 PR）、Meta／Google 廣告投放與海外 KOL/KOC 網紅合作，以 AI 賦能系統協助品牌進入台灣、港澳與東南亞市場，在陌生市場真正落地並持續增長。">
+<meta name="description" content="Eastbright Global 提供市場策略診斷、海外整合行銷（Facebook、Instagram、TikTok 社群經營、百萬級流量 Threads 經營與小紅書矩陣種草）、Meta／Google 廣告投放與海外 KOL/KOC 網紅合作，以 AI 企業賦能協助品牌進入台灣、港澳與東南亞市場，在陌生市場真正落地並持續增長。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -175,6 +175,7 @@ p,li{text-wrap:pretty}
 .tile h3{margin-top:clamp(1.6rem,3.6vw,2.6rem);font-size:clamp(2rem,3.6vw,3rem);font-weight:900;line-height:1.14;letter-spacing:.01em}
 .tile .also{margin-top:.75rem;font-size:clamp(.95rem,1.3vw,1.06rem);font-weight:800}
 .tile.ink .also{color:var(--lime)}
+.tile .also.em{align-self:flex-start;background:var(--ink);color:var(--lime);padding:.3rem .85rem;border-radius:6px}
 .tile .val{margin-top:1rem;font-size:.93rem;line-height:1.85;max-width:30em}
 .tile.ink .val{color:var(--dk-1)}
 .tile.lime .val{color:var(--ink-70)}
@@ -185,22 +186,40 @@ p,li{text-wrap:pretty}
 .tile li::before{content:"";position:absolute;left:0;top:.55rem;width:.5rem;height:.5rem}
 .tile.ink li::before{background:var(--lime)}
 .tile.lime li::before{background:var(--ink)}
-.tile-cta{margin-top:auto;padding-top:1.6rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.7rem;font-weight:800;font-size:.9rem}
+.tile-cta{margin-top:auto;padding-top:1.9rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.7rem;font-weight:800;font-size:.9rem}
 .tile-cta::after{content:"";position:absolute;inset:0}
 .tile-cta .arr{display:inline-flex;align-items:center;justify-content:center;width:2.3rem;height:2.3rem;font-size:1rem;transition:transform .3s}
 .tile.ink .tile-cta .arr{background:var(--lime);color:var(--ink)}
 .tile.lime .tile-cta .arr{background:var(--ink);color:var(--lime)}
 .tile:hover .tile-cta .arr{transform:rotate(-45deg)}
 
-.ai-band{margin-bottom:1.2rem;display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem 2rem;
-  align-items:center;padding:1.5rem 1.8rem;border:1.5px solid var(--ink);background:var(--mist)}
-.ai-tag{display:inline-flex;align-items:center;gap:.55rem;background:var(--lime);border:1.5px solid var(--ink);
-  padding:.5rem 1.1rem;border-radius:999px;font-weight:900;font-size:1.02rem;white-space:nowrap}
+.tile .ai-core{margin-top:1.1rem;display:flex;align-items:flex-start;gap:.6rem;font-size:.86rem;font-weight:800;line-height:1.6}
+.ai-core .k{flex:none;font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.1em;padding:.2rem .55rem;border-radius:999px;margin-top:.08rem}
+.tile.ink .ai-core .k{background:var(--lime);color:var(--ink)}
+.tile.lime .ai-core .k{background:var(--ink);color:var(--lime)}
+.tile.ink .ai-core{color:#fff}
+.tile-art{position:absolute;right:clamp(1.8rem,3.4vw,2.6rem);bottom:clamp(1.8rem,3.4vw,2.6rem);width:54px;height:54px;pointer-events:none}
+.tile.ink .tile-art{color:var(--lime)}
+.tile.lime .tile-art{color:var(--ink)}
+.tile-art svg{width:100%;height:100%;display:block}
+
+/* ---------- AI 企業賦能（萊姆色塊） ---------- */
+.aien{background:var(--lime);color:var(--ink);padding:clamp(4.5rem,9vw,7rem) 0;border-bottom:1.5px solid var(--ink)}
+.aien .rail::before{background:var(--ink)}
+.aien-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(2rem,5vw,4rem);align-items:center}
+.ai-tag{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.4rem;background:var(--ink);color:var(--lime);
+  padding:.45rem 1.05rem;border-radius:999px;font-weight:900;font-size:.95rem;white-space:nowrap}
 .ai-tag .x{font-family:var(--mono);font-weight:600}
-.ai-list{list-style:none;display:flex;flex-wrap:wrap;gap:.35rem 0;font-weight:800;font-size:clamp(.92rem,1.3vw,1.05rem);line-height:1.6}
-.ai-list li{white-space:nowrap}
-.ai-list li+li::before{content:"・";color:var(--ink-45);margin:0 .35rem}
-.sec-note{margin-top:1.4rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--ink-45)}
+.aien h2{margin-top:1rem;font-size:clamp(2.8rem,7.5vw,5.8rem);font-weight:900;line-height:1.04;letter-spacing:.01em}
+.aien .lead{margin-top:1.4rem;max-width:34em;font-size:clamp(1rem,1.4vw,1.15rem);font-weight:500;line-height:1.95}
+.aien-art svg{width:100%;height:auto;display:block;max-width:440px;margin-left:auto}
+.aien-art .orbit{transform-origin:200px 160px;animation:spin 40s linear infinite}
+.aien-grid{margin-top:clamp(2.6rem,5vw,3.6rem);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem;list-style:none}
+.aien-grid li{background:var(--ink);color:#fff;padding:1.6rem 1.4rem 1.7rem;display:flex;flex-direction:column;gap:.8rem}
+.aien-grid .n{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;color:var(--lime)}
+.aien-grid svg{width:44px;height:44px;color:var(--lime)}
+.aien-grid b{font-size:clamp(1.05rem,1.5vw,1.2rem);font-weight:900;line-height:1.45}
+.aien-grid p{font-size:.88rem;color:var(--dk-1);line-height:1.8}
 
 /* ---------- 5 Advantage ---------- */
 .stats3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);
@@ -352,7 +371,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none}
   .track i{animation:none;left:100%}
-  .ring-btn .spin{animation:none}
+  .ring-btn .spin,.aien-art .orbit{animation:none}
   .ring-btn .ar,.tile-cta .arr{transition:none}
   .tile:hover{transform:none}
   html{scroll-behavior:auto}
@@ -375,12 +394,17 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
   .ft{grid-template-columns:1fr 1fr}
   .ft>div:first-child{grid-column:1/-1}
 }
+@media (max-width:980px){
+  .aien-grid{grid-template-columns:1fr 1fr}
+}
 @media (max-width:860px){
   .svc4{grid-template-columns:1fr}
   .tile{min-height:0}
 }
 @media (max-width:760px){
-  .svc4,.ai-band{grid-template-columns:1fr}
+  .svc4,.aien-top{grid-template-columns:1fr}
+  .aien-grid{grid-template-columns:1fr}
+  .aien-art svg{margin:0 auto;max-width:340px}
   .tile{min-height:0}
   .svc-idx{grid-template-columns:1fr 1fr}
   .hero-foot{grid-template-columns:1fr}
@@ -418,6 +442,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h20M3 14h20M3 20h13"/></svg>
     </button>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#ai">AI 企業賦能</a></li>
       <li><a href="#services">核心服務</a></li>
       <li><a href="#markets">跨境市場</a></li>
       <li><a href="#advantage">實戰優勢</a></li>
@@ -459,6 +484,64 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
   </div>
 </header>
 
+<!-- AI 企業賦能（全站最上層） -->
+<section class="aien" id="ai">
+  <div class="wrap">
+    <div class="aien-top">
+      <div>
+        <p class="rail rv">AI ENABLEMENT</p>
+        <span class="ai-tag rv"><span class="x">×</span>AI 賦能系統</span>
+        <h2 class="rv"><span class="nw">AI 企業</span><span class="nw">賦能</span></h2>
+        <p class="lead rv">把 AI 真正交到您的團隊手上。從工作流診斷、協作流程設計、品牌知識庫到企業內訓，協助團隊建立能自主運作的 AI 行銷能力——工具會更新，能力留在團隊裡。</p>
+      </div>
+      <figure class="aien-art rv" aria-hidden="true">
+        <svg viewBox="0 0 400 320" fill="none">
+          <circle class="orbit" cx="200" cy="160" r="112" stroke="#101112" stroke-width="1.5" stroke-dasharray="4 7"/>
+          <g stroke="#101112" stroke-width="2">
+            <path d="M200 160 76 64M200 160 324 64M200 160 76 256M200 160 324 256"/>
+          </g>
+          <g fill="#FFFFFF" stroke="#101112" stroke-width="2">
+            <circle cx="76" cy="64" r="40"/><circle cx="324" cy="64" r="40"/>
+            <circle cx="76" cy="256" r="40"/><circle cx="324" cy="256" r="40"/>
+          </g>
+          <g font-family="Noto Sans TC, sans-serif" font-size="17" font-weight="800" fill="#101112" text-anchor="middle">
+            <text x="76" y="70">策略</text><text x="324" y="70">社群</text>
+            <text x="76" y="262">廣告</text><text x="324" y="262">創作者</text>
+          </g>
+          <circle cx="200" cy="160" r="58" fill="#101112"/>
+          <text x="200" y="174" text-anchor="middle" font-family="Archivo, sans-serif" font-size="42" font-weight="900" fill="#C9F73D">AI</text>
+        </svg>
+      </figure>
+    </div>
+    <ul class="aien-grid">
+      <li class="rv">
+        <span class="n">01</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="21" cy="21" r="12"/><path d="m30 30 10 10M15 21h12M21 15v12"/></svg>
+        <b>行銷工作流診斷</b>
+        <p>盤點團隊現有的行銷流程與分工，找出最值得、也最適合導入 AI 的環節。</p>
+      </li>
+      <li class="rv">
+        <span class="n">02</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="14" cy="16" r="6"/><circle cx="34" cy="16" r="6"/><path d="M4 38c1.5-6 5.5-9 10-9s8.5 3 10 9M24 38c1.5-6 5.5-9 10-9s8.5 3 10 9"/></svg>
+        <b><span class="nw">團隊 AI 協作流程</span><span class="nw">與審核機制</span></b>
+        <p>協助團隊設計人機協作的工作方式與品質把關標準，讓產出又快又穩，判斷始終留在團隊手上。</p>
+      </li>
+      <li class="rv">
+        <span class="n">03</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M8 10h14a4 4 0 0 1 4 4v24a3 3 0 0 0-3-3H8zM40 10H28a4 4 0 0 0-4 4v24a3 3 0 0 1 3-3h13z"/></svg>
+        <b>品牌知識庫建置</b>
+        <p>整理品牌語氣、產品資訊與過往素材，讓團隊用 AI 產出的每一則內容都貼合品牌。</p>
+      </li>
+      <li class="rv">
+        <span class="n">04</span>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18 24 9l20 9-20 9z"/><path d="M12 22v10c4 4 20 4 24 0V22M44 18v12"/></svg>
+        <b>企業內訓與導入陪跑</b>
+        <p>依團隊程度規劃企業內訓課程，並陪跑至團隊能獨立運作，讓 AI 成為組織內建的能力。</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
 
 <!-- 2 Services：四大核心服務（全站主角） -->
 <section class="sec" id="services">
@@ -467,51 +550,53 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       <p class="rail rv">SERVICES</p>
       <div>
         <h2 class="h2 rv"><span class="nw hl">一站式</span><span class="nw">跨境市場</span><span class="nw">行銷服務</span></h2>
-        <p class="sub rv">四大核心服務，涵蓋跨境品牌從市場策略診斷、海外整合行銷、廣告投放到 KOL/KOC 網紅合作的完整拼圖——可單獨啟動，也能彈性組合。</p>
+        <p class="sub rv">四大核心服務皆以 AI 為核心引擎，涵蓋跨境品牌從市場策略診斷、海外整合行銷、廣告投放到 KOL/KOC 網紅合作的完整拼圖——可單獨啟動，也能彈性組合。</p>
       </div>
-    </div>
-    <div class="ai-band rv" id="ai">
-      <span class="ai-tag"><span class="x">×</span>AI 賦能系統</span>
-      <ul class="ai-list"><li>行銷工作流診斷</li><li>AI 產線與審核機制建置</li><li>品牌知識庫建置</li><li>團隊培訓與導入陪跑</li></ul>
     </div>
     <div class="svc4">
       <article class="tile ink rv" id="svc-1">
         <div class="tile-top"><span class="i">01</span><span>MARKET &amp; BRAND STRATEGY</span></div>
         <h3>市場策略診斷</h3>
-        <p class="also">競品分析・在地化品牌策略</p>
-        <p class="val">看清市場、拆解競品，把品牌翻譯成當地人聽得懂、也願意買單的語言，為品牌找到在新市場勝出的位置。</p>
+        <p class="also">競品市場分析・在地化品牌策略</p>
+        <p class="val">深入調研競品在當地的溝通語言與訴求，看清對手怎麼說、消費者聽進什麼，為品牌找出差異化的切角，再翻譯成當地人聽得懂、也願意買單的語言。</p>
+        <p class="ai-core"><span class="k">AI CORE</span>AI 輔助競品語料比對與市場訊號整理</p>
         <ul>
           <li>市場選擇與可行性評估</li>
-          <li>競品與通路結構分析</li>
-          <li>在地化品牌定位與溝通策略</li>
+          <li>競品市場分析與溝通語言調研</li>
+          <li>差異化定位與在地溝通策略</li>
           <li>品牌訊息架構與在地語彙</li>
         </ul>
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="34" cy="34" r="26"/><circle cx="34" cy="34" r="14"/><path d="M34 34 52 16"/><circle cx="34" cy="34" r="3.5" fill="currentColor" stroke="none"/></svg></span>
         <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E5%B8%82%E5%A0%B4%E7%AD%96%E7%95%A5%E8%A8%BA%E6%96%B7" aria-label="洽詢市場策略診斷服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
       <article class="tile lime rv" id="svc-2">
         <div class="tile-top"><span class="i">02</span><span>INTEGRATED MARKETING</span></div>
         <h3>海外整合行銷</h3>
-        <p class="also">海外社媒運營／社群口碑／PR</p>
-        <p class="val">以當地語言和節日策略經營社群媒體，累積品牌聲量與口碑，成為消費者做決定前最先看見的印象。</p>
+        <p class="also em"><span class="nw">百萬級流量 Threads 經營</span>・<span class="nw">矩陣種草</span></p>
+        <p class="val">以當地語言與節日節奏經營 Facebook、Instagram、TikTok 與 Threads，打造百萬級流量的話題帳號，再以多帳號矩陣種草擴散口碑，讓品牌成為消費者做決定前最先看見的名字。</p>
+        <p class="ai-core"><span class="k">AI CORE</span>AI 加速在地化內容產出與話題趨勢追蹤</p>
         <ul>
-          <li>Facebook／Instagram 在地社群經營</li>
-          <li>Threads 話題經營與小紅書種草佈局</li>
-          <li>社群口碑經營與輿情監測</li>
-          <li>公關（PR）與媒體曝光</li>
+          <li>百萬級流量 Threads 話題經營</li>
+          <li>小紅書與多平台矩陣種草</li>
+          <li>Facebook／Instagram／TikTok 在地社群經營</li>
+          <li>社群口碑、輿情監測與 PR 曝光</li>
         </ul>
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="40" height="30" rx="6"/><path d="M16 40v12l12-12"/><circle cx="52" cy="22" r="8"/><circle cx="56" cy="48" r="6"/><path d="M46 26l-4 4M50 30l4 12"/></svg></span>
         <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E6%B5%B7%E5%A4%96%E6%95%B4%E5%90%88%E8%A1%8C%E9%8A%B7" aria-label="洽詢海外整合行銷服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
       <article class="tile lime rv" id="svc-3">
         <div class="tile-top"><span class="i">03</span><span>PERFORMANCE ADS</span></div>
         <h3>Meta／Google<br>廣告投放</h3>
         <p class="also">以轉換為導向的成效廣告</p>
-        <p class="val">從策略、受眾、素材到追蹤一手操盤，以數據持續優化，讓每一分預算都對準可衡量的商業成果。</p>
+        <p class="val">從策略、受眾、素材到追蹤一手操盤，以 AI 快速產出多版素材投入測試，再以數據持續優化，讓每一分預算都對準可衡量的商業成果。</p>
+        <p class="ai-core"><span class="k">AI CORE</span>AI 多版素材生成與成效數據判讀</p>
         <ul>
           <li>廣告策略與預算配置</li>
-          <li>受眾設定與素材測試</li>
+          <li>受眾設定與 AI 素材測試</li>
           <li>轉換追蹤與數據儀表板</li>
           <li>成效優化與月度報告</li>
         </ul>
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 56h52"/><path d="M14 46l12-12 10 8 18-22"/><path d="M44 20h10v10"/></svg></span>
         <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9AMeta%EF%BC%8FGoogle%20%E5%BB%A3%E5%91%8A%E6%8A%95%E6%94%BE" aria-label="洽詢 Meta／Google 廣告投放服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
       <article class="tile ink rv" id="svc-4">
@@ -519,16 +604,17 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
         <h3><span class="nw">海外</span> <span class="nw">KOL/KOC</span><br><span class="nw">網紅合作</span></h3>
         <p class="also">知識型與科技型創作者網絡</p>
         <p class="val">為高決策門檻產品，媒合具備產業理解力的知識型創作者。以深度內容取代單純曝光，在目標市場建立信任，將關注轉化為實際用戶。</p>
+        <p class="ai-core"><span class="k">AI CORE</span>AI 輔助創作者受眾比對與聲量追蹤</p>
         <ul>
           <li>KOL／KOC 篩選與媒合</li>
           <li>合作企劃與內容腳本</li>
           <li>聯盟行銷策動與聯名活動</li>
           <li>聲量與成效追蹤</li>
         </ul>
+        <span class="tile-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="22" r="9"/><circle cx="48" cy="26" r="7"/><path d="M8 54c2-10 8-15 16-15s14 5 16 15M40 54c1-8 4-12 8-12s7 4 8 12"/></svg></span>
         <a class="tile-cta" href="mailto:vivian30427850605@gmail.com?subject=%E6%B4%BD%E8%A9%A2%EF%BC%9A%E6%B5%B7%E5%A4%96%20KOL/KOC%20%E7%B6%B2%E7%B4%85%E5%90%88%E4%BD%9C" aria-label="洽詢海外 KOL/KOC 網紅合作服務">洽詢此服務 <span class="arr" aria-hidden="true">→</span></a>
       </article>
     </div>
-    <p class="sec-note rv">服務市場涵蓋台灣、港澳與東南亞，其他國際市場可依專案評估。</p>
   </div>
 </section>
 
@@ -653,8 +739,8 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
           </svg>
         </div>
         <span class="en">AI ENABLEMENT</span>
-        <h3><span class="nw">讓策略與執行</span><span class="nw">持續優化的</span> <span class="nw">AI 行銷產線</span></h3>
-        <p>我們每天在 AI 產品端操盤行銷，將 AI 導入產出流程、把人留在判斷點，並將每一次決策的理由沉澱下來，讓團隊越做越準。</p>
+        <h3><span class="nw">讓團隊</span><span class="nw">越用越強的</span> <span class="nw">AI 企業賦能</span></h3>
+        <p>我們每天在 AI 產品端操盤行銷，把實戰中驗證過的做法轉化為團隊能上手的流程與企業內訓，讓 AI 成為組織內建的能力，每一次決策都越做越準。</p>
       </article>
     </div>
 
@@ -674,7 +760,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
         <div>
           <p class="fd-name">S Wang</p>
           <p class="fd-role">共同創辦人．跨境市場顧問<span class="loc">吉隆坡</span></p>
-          <p class="fd-bio">十年科技與國際品牌行銷經驗，歷經上海、香港到吉隆坡，深耕亞洲雙向跨境市場。經手多個中國品牌出海、國際服飾品牌 APAC 營運，以及 AI 產品亞洲市場推廣，具備從零建立多語言、多市場在地溝通的實戰經驗。現常駐吉隆坡，往返新加坡與台灣，負責市場進入策略與東南亞業務。</p>
+          <p class="fd-bio">十年科技與國際品牌行銷經驗，歷經上海、香港到吉隆坡，深耕亞洲雙向跨境市場。經手多個中國品牌出海，以及 AI 產品亞洲市場推廣，具備從零建立多語言、多市場在地溝通的實戰經驗。現常駐吉隆坡，往返新加坡與台灣，負責市場進入策略與東南亞業務。</p>
           <div class="ftags"><span>跨境市場策略</span><span>品牌出海</span><span>APAC 社群運營</span><span>多市場在地化</span><span>AI 產品行銷</span></div>
         </div>
       </article>
@@ -687,7 +773,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
         <p class="d">7 個工作天，先看清楚這個市場值不值得進。適合正在評估「要不要進」或「先進哪一個市場」的品牌。</p>
         <ul>
           <li><b>市場行銷策略與優先順序建議</b></li>
-          <li><b>競品與通路結構掃描</b></li>
+          <li><b>競品市場分析</b>——溝通語言調研與差異化切角</li>
           <li><b>在地化風險清單</b>——什麼不能照搬</li>
           <li><b>合作形式建議</b></li>
           <li><b>失敗條件</b>——什麼情況下我們建議您不要進</li>
@@ -696,7 +782,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
       </div>
       <div class="t-stub">
         <span class="t-pass">ENTRY PASS · 跨境品牌檢測</span>
-        <div class="t-price"><b>NT$8,800</b><span>7 個工作天交付</span></div>
+        <div class="t-price"><b>USD 300</b><span>7 個工作天交付</span></div>
         <p class="t-fine"><b>三個月內啟動後續合作，費用全額折抵。</b>不含執行與後續陪跑。</p>
         <a class="btn btn-lime" href="mailto:vivian30427850605@gmail.com?subject=%E9%A0%90%E7%B4%84%EF%BC%9A%E8%B7%A8%E5%A2%83%E5%93%81%E7%89%8C%E6%AA%A2%E6%B8%AC">預約檢測 <span class="arr">→</span></a>
       </div>
@@ -769,7 +855,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
     <div class="faq">
       <details class="rv">
         <summary><span class="num">01</span><span class="q">Eastbright Global 提供哪些服務？我的品牌該從哪一項開始？</span><span class="ic" aria-hidden="true"></span></summary>
-        <div class="ans">Eastbright Global 提供四大核心服務：<a href="#services">市場策略診斷、海外整合行銷、Meta／Google 廣告投放與海外 KOL/KOC 網紅合作</a>。如果您正在評估「要不要進」或「先進哪一個市場」，<a href="#diagnostic">跨境品牌檢測</a>會是最適合的起點——7 個工作天、NT$8,800，三個月內啟動後續合作可全額折抵。如果您已確定目標市場、準備首度進入或重新定位，<b>落地專案</b>能在明確的時程內完成市場進入策略與首波佈局。若您希望在台灣、港澳或東南亞長期經營，<b>整合顧問月費</b>能持續推進海外整合行銷、廣告投放與 KOL/KOC 網紅合作，並導入 AI 賦能系統。專案與月費方案依範疇報價，將於諮詢時提供。還不確定嗎？歡迎與我們聯繫。</div>
+        <div class="ans">Eastbright Global 提供四大核心服務：<a href="#services">市場策略診斷、海外整合行銷、Meta／Google 廣告投放與海外 KOL/KOC 網紅合作</a>。如果您正在評估「要不要進」或「先進哪一個市場」，<a href="#diagnostic">跨境品牌檢測</a>會是最適合的起點——7 個工作天、USD 300，三個月內啟動後續合作可全額折抵。如果您已確定目標市場、準備首度進入或重新定位，<b>落地專案</b>能在明確的時程內完成市場進入策略與首波佈局。若您希望在台灣、港澳或東南亞長期經營，<b>整合顧問月費</b>能持續推進海外整合行銷、廣告投放與 KOL/KOC 網紅合作，並導入 AI 賦能系統。專案與月費方案依範疇報價，將於諮詢時提供。還不確定嗎？歡迎與我們聯繫。</div>
       </details>
       <details class="rv">
         <summary><span class="num">02</span><span class="q">進入一個新市場通常需要多久？該如何開始？</span><span class="ic" aria-hidden="true"></span></summary>
@@ -843,7 +929,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
           <li><a href="#svc-2">海外整合行銷</a></li>
           <li><a href="#svc-3">Meta／Google 廣告投放</a></li>
           <li><a href="#svc-4">海外 KOL/KOC 網紅合作</a></li>
-          <li><a href="#ai">AI 賦能系統</a></li>
+          <li><a href="#ai">AI 企業賦能</a></li>
           <li><a href="#diagnostic">跨境品牌檢測</a></li>
         </ul>
       </div>
