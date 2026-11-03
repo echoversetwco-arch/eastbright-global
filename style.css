@@ -277,7 +277,7 @@ p,li{text-wrap:pretty}
 .ins p{margin-top:.5rem;font-size:.86rem;color:var(--ink-70);line-height:1.8}
 .more{margin-top:2.2rem;padding-top:1.3rem;border-top:1.5px solid var(--ink);font-size:.88rem;color:var(--ink-70);line-height:2}
 .more .lb{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--ink-45);margin-right:.8rem}
-.more b{color:var(--ink);font-weight:800}
+.more b{color:var(--ink);font-weight:800;white-space:nowrap}
 .more i{font-style:normal;color:var(--ink-45);margin:0 .45rem}
 .note{margin-top:.5rem;font-size:.8rem;color:var(--ink-45)}
 
@@ -400,7 +400,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
   .tile-top{letter-spacing:.04em}
 }
 @media (max-width:1060px){
-  .nav-links{position:fixed;top:56px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.3rem;
+  .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.3rem;
     background:var(--ink);padding:1.6rem var(--pad) 2rem;display:none;border-bottom:1px solid var(--rule-dk)}
   .nav-links.open{display:flex}
   .burger{display:block}
@@ -425,4 +425,26 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
 .nav-links a.on{color:var(--lime)}
 @media (max-width:760px){
   .cases.cols,.ins-list.cols{grid-template-columns:1fr}
+}
+
+/* ---------- 手機版精簡 ---------- */
+@media (max-width:760px){
+  .aien h2{font-size:clamp(2.6rem,13vw,3.4rem)}
+  .aien-art svg{max-width:250px}
+  .aien-grid{gap:.8rem}
+  .aien-grid li{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:1rem;row-gap:.35rem;padding:1.2rem 1.2rem 1.3rem}
+  .aien-grid li .n{display:none}
+  .aien-grid li svg{grid-row:1/3;width:36px;height:36px;margin-top:.15rem}
+  .aien-grid b{font-size:1.05rem}
+  .tile h3{margin-top:1.3rem}
+  .tile .ai-core{flex-direction:column;gap:.4rem}
+  .stats3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .st{border-right:1.5px solid var(--ink);border-bottom:none;padding:1.1rem .7rem 1rem}
+  .st:last-child{border-right:none}
+  .st b{font-size:clamp(1.5rem,7.6vw,2.2rem);letter-spacing:-.03em}
+  .pil{gap:.35rem 1rem;padding:1.5rem 0}
+  .pil .ico{grid-row:1/4;width:2.8rem;height:2.8rem}
+  .st span{font-size:.82rem;margin-top:.5rem}
+  .st small{font-size:.52rem;letter-spacing:.08em}
+  .ring-btn{width:6.5rem;height:6.5rem}
 }
