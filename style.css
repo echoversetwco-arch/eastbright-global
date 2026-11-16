@@ -399,7 +399,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
   .tile h3{font-size:1.75rem}
   .tile-top{letter-spacing:.04em}
 }
-@media (max-width:1060px){
+@media (max-width:1180px){
   .nav-links{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:1.3rem;
     background:var(--ink);padding:1.6rem var(--pad) 2rem;display:none;border-bottom:1px solid var(--rule-dk)}
   .nav-links.open{display:flex}
@@ -447,4 +447,44 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
   .st span{font-size:.82rem;margin-top:.5rem}
   .st small{font-size:.52rem;letter-spacing:.08em}
   .ring-btn{width:6.5rem;height:6.5rem}
+}
+
+/* ---------- 語言切換 ---------- */
+.nav-in{justify-content:flex-start}
+.brand{margin-right:auto}
+.lang{position:relative;flex:none;display:inline-flex;align-items:center;padding:3px;border:1.5px solid var(--rule-dk2);border-radius:999px;
+  font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.06em;color:var(--dk-1);transition:border-color .2s}
+.lang:hover{border-color:var(--lime)}
+.lang i{position:absolute;top:3px;bottom:3px;left:3px;width:0;border-radius:999px;background:var(--lime);
+  transition:left .28s cubic-bezier(.65,0,.3,1),width .28s cubic-bezier(.65,0,.3,1)}
+.lang .opt{position:relative;z-index:1;padding:.32rem .75rem;border-radius:999px;line-height:1.2;white-space:nowrap;transition:color .28s}
+.lang .opt.on{color:var(--ink)}
+.lang:not(.js) .opt.on{background:var(--lime)}
+.lang:hover .opt:not(.on){color:#fff}
+.lang .short{display:none}
+@media (max-width:1299px){
+  .lang .full{display:none}
+  .lang .short{display:inline}
+}
+
+/* ---------- 英文版 ---------- */
+html[lang=en] body{line-height:1.7}
+html[lang=en] h1,html[lang=en] h2,html[lang=en] h3,html[lang=en] .q{text-wrap:balance}
+html[lang=en] .word{font-size:clamp(1.3rem,6.4vw,5.2rem);letter-spacing:-.01em}
+html[lang=en] .nav-links{gap:1.45rem}
+html[lang=en] .aien h2{font-size:clamp(2.4rem,6.2vw,5.2rem)}
+@media (max-width:760px){
+  .st b{font-size:clamp(1.25rem,6.4vw,2.2rem)}
+}
+@media (max-width:400px){
+  .nav-in{gap:.6rem}
+  .brand{font-size:.8rem;letter-spacing:.06em}
+  .lang{font-size:.64rem}
+  .lang .opt{padding:.3rem .5rem}
+  .burger{padding:.2rem}
+}
+@media (max-width:360px){
+  .nav-in{gap:.5rem}
+  .brand{font-size:.72rem;letter-spacing:.03em;gap:.4rem}
+  .burger{padding:0}
 }
