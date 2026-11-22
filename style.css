@@ -462,7 +462,7 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
 .lang:not(.js) .opt.on{background:var(--lime)}
 .lang:hover .opt:not(.on){color:#fff}
 .lang .short{display:none}
-@media (max-width:1299px){
+@media (max-width:480px){
   .lang .full{display:none}
   .lang .short{display:inline}
 }
@@ -470,13 +470,13 @@ footer{background:var(--ink);color:var(--dk-2);padding:clamp(3.5rem,7vw,5rem) 0 
 /* ---------- 英文版 ---------- */
 html[lang=en] body{line-height:1.7}
 html[lang=en] h1,html[lang=en] h2,html[lang=en] h3,html[lang=en] .q{text-wrap:balance}
-html[lang=en] .word{font-size:clamp(1.3rem,6.4vw,5.2rem);letter-spacing:-.01em}
-html[lang=en] .nav-links{gap:1.45rem}
+html[lang=en] .word{font-size:clamp(1.2rem,3.5vw,3rem);line-height:1.1;letter-spacing:-.01em}
+html[lang=en] .nav-links{gap:1.3rem}
 html[lang=en] .aien h2{font-size:clamp(2.4rem,6.2vw,5.2rem)}
 @media (max-width:760px){
   .st b{font-size:clamp(1.25rem,6.4vw,2.2rem)}
 }
-@media (max-width:400px){
+@media (max-width:440px){
   .nav-in{gap:.6rem}
   .brand{font-size:.8rem;letter-spacing:.06em}
   .lang{font-size:.64rem}
@@ -487,4 +487,11 @@ html[lang=en] .aien h2{font-size:clamp(2.4rem,6.2vw,5.2rem)}
   .nav-in{gap:.5rem}
   .brand{font-size:.72rem;letter-spacing:.03em;gap:.4rem}
   .burger{padding:0}
+}
+.faq .ans p+ul,.faq .ans ul+p{margin-top:.7rem}
+.faq .ans ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.faq .ans li{position:relative;padding-left:1.1rem}
+.faq .ans li::before{content:"";position:absolute;left:0;top:.8em;width:.4rem;height:.4rem;background:var(--lime-deep)}
+@media (max-width:760px){
+  html[lang=en] .st b{font-size:clamp(1.1rem,5.8vw,2.2rem)}
 }
