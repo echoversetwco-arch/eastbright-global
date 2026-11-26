@@ -28,6 +28,23 @@ The website is available in Traditional Chinese (default) and English. Client na
 - Yvonne Wang: Co-Founder, Growth Marketing Consultant, based in Taiwan
 - S Wang: Co-Founder, Cross-Border Market Consultant, based in Kuala Lumpur
 
+## Service and company pages
+
+- [About Eastbright Global](https://eastbrightglobal.com/en/about.html): Eastbright Global is a cross-border marketing agency focused on AI, SaaS and tech brands, with teams in Taiwan and Kuala Lumpur serving Taiwan, Hong Kong, Macau and Southeast Asia.
+- [關於 Eastbright Global](https://eastbrightglobal.com/about.html): Eastbright Global 是一家專注於跨境行銷的代理商，聚焦 AI、SaaS 與科技品牌，團隊分駐台灣與吉隆坡，服務台灣、港澳與東南亞市場。
+- [AI Enablement](https://eastbrightglobal.com/en/services/ai-enablement.html): Eastbright Global’s AI Enablement helps marketing teams build AI capability they can run on their own, through workflow diagnostics, AI collaboration and review processes, a brand knowledge base and in-house training.
+- [AI 企業賦能](https://eastbrightglobal.com/services/ai-enablement.html): Eastbright Global 的 AI 企業賦能，透過行銷工作流診斷、團隊 AI 協作流程與審核機制、品牌知識庫建置與企業內訓陪跑，協助團隊建立能自主運作的 AI 行銷能力。
+- [Creator Partnerships](https://eastbrightglobal.com/en/services/creator-partnerships.html): Eastbright Global’s Creator Partnerships pair AI, SaaS and tech brands with expert and tech creators (KOLs/KOCs) from a network of 2,000+, using in-depth content to build trust and turn attention into customers.
+- [海外 KOL/KOC 網紅合作](https://eastbrightglobal.com/services/creator-partnerships.html): Eastbright Global 的海外 KOL/KOC 網紅合作，為高決策門檻的 AI、SaaS 與科技產品，媒合 2,000+ 位知識型與科技型創作者，以深度內容建立信任並帶來實際用戶。
+- [FAQ](https://eastbrightglobal.com/en/faq.html): Eastbright Global FAQ: who the company is, services, what the Brand Check includes, timelines, results tracking and data protection.
+- [常見問題](https://eastbrightglobal.com/faq.html): Eastbright Global 常見問題：公司介紹、服務範圍、跨境品牌檢測內容、合作時程、成效追蹤與資料保護。
+- [Market Strategy Diagnostic](https://eastbrightglobal.com/en/services/market-strategy.html): Eastbright Global’s Market Strategy Diagnostic helps AI, SaaS and tech brands choose markets, research competitor messaging and build localised brand strategy for Taiwan, Hong Kong, Macau and Southeast Asia.
+- [市場策略診斷](https://eastbrightglobal.com/services/market-strategy.html): Eastbright Global 的市場策略診斷，協助 AI、SaaS 與科技品牌完成市場選擇、競品溝通語言調研與在地化品牌策略，找出進入台灣、港澳與東南亞的差異化切角。
+- [Meta / Google Advertising](https://eastbrightglobal.com/en/services/performance-ads.html): Eastbright Global’s Meta / Google Advertising runs strategy, targeting, creative and tracking in-house, using AI to test creative variants fast so AI, SaaS and tech brands spend on measurable results.
+- [Meta／Google 廣告投放](https://eastbrightglobal.com/services/performance-ads.html): Eastbright Global 的 Meta／Google 廣告投放，從策略、受眾、素材到轉換追蹤一手操盤，以 AI 快速產出多版素材測試，協助 AI、SaaS 與科技品牌把預算對準可衡量的成果。
+- [Social & Content Marketing](https://eastbrightglobal.com/en/services/social-content-marketing.html): Eastbright Global’s Social & Content Marketing builds localised content and word-of-mouth on Threads, Xiaohongshu (RED), Facebook, Instagram and TikTok so AI, SaaS and tech brands get seen, talked about and chosen.
+- [海外整合行銷](https://eastbrightglobal.com/services/social-content-marketing.html): Eastbright Global 的海外整合行銷，以 Threads、小紅書、Facebook、Instagram、TikTok 的在地社群內容與口碑佈局，協助 AI、SaaS 與科技品牌在目標市場被看見、被討論、被選擇。
+
 ## Pages
 
 - [Home (English)](https://eastbrightglobal.com/en/)

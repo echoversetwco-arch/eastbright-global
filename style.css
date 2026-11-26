@@ -524,3 +524,7 @@ a.post-card:hover h3{text-decoration:underline;text-decoration-color:var(--lime-
 .post-card .m{display:block;margin-top:.7rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-45)}
 .ins-sub{margin:3rem 0 0;font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.16em;color:var(--ink-45);text-transform:uppercase}
 .ins-sub:first-child{margin-top:0}
+
+/* ---------- 服務專頁、關於、FAQ ---------- */
+.page-cta{margin-top:3rem;padding-top:1.6rem;border-top:1.5px solid var(--ink);display:flex;gap:.8rem;flex-wrap:wrap}
+.post h3{scroll-margin-top:90px}
