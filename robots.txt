@@ -1,0 +1,20 @@
+# Eastbright Global — https://eastbrightglobal.com/
+
+User-agent: *
+Allow: /
+
+# AI search and assistant crawlers
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-User
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://eastbrightglobal.com/sitemap.xml
