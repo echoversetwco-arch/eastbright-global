@@ -524,11 +524,3 @@ a.post-card:hover h3{text-decoration:underline;text-decoration-color:var(--lime-
 .post-card .m{display:block;margin-top:.7rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-45)}
 .ins-sub{margin:3rem 0 0;font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.16em;color:var(--ink-45);text-transform:uppercase}
 .ins-sub:first-child{margin-top:0}
-
-/* ---------- 首頁主標題 ---------- */
-.hero-h{margin-top:clamp(2.2rem,5vw,3.4rem);max-width:16em;font-size:clamp(2.3rem,6.2vw,5rem);font-weight:900;line-height:1.1;letter-spacing:.01em;color:#fff}
-.hero-h .lime{color:var(--lime)}
-html[lang=en] .hero-h{max-width:18em;font-size:clamp(2rem,5vw,4.1rem);letter-spacing:-.015em;text-wrap:balance}
-.route.sm{margin:clamp(1.8rem,3.6vw,2.6rem) 0 clamp(1.8rem,3.6vw,2.6rem)}
-.route.sm .word,html[lang=en] .route.sm .word{font-size:clamp(1.05rem,2.4vw,1.9rem)}
-.route.sm .stop{padding-top:2.1rem}
