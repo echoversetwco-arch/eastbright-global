@@ -522,3 +522,5 @@ html[lang=en] .aien h2{font-size:clamp(2.4rem,6.2vw,5.2rem)}
 a.post-card{display:block;transition:background .2s}
 a.post-card:hover h3{text-decoration:underline;text-decoration-color:var(--lime-deep);text-decoration-thickness:3px}
 .post-card .m{display:block;margin-top:.7rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-45)}
+.ins-sub{margin:3rem 0 0;font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.16em;color:var(--ink-45);text-transform:uppercase}
+.ins-sub:first-child{margin-top:0}

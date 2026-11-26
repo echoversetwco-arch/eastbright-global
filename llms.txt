@@ -32,16 +32,24 @@ The website is available in Traditional Chinese (default) and English. Client na
 
 - [Home (English)](https://eastbrightglobal.com/en/)
 - [Case Studies](https://eastbrightglobal.com/en/cases.html): cases presented by industry, without client names
-- [Insights](https://eastbrightglobal.com/en/insights.html): perspectives on market selection and localisation in Asia-Pacific
+- [Insights](https://eastbrightglobal.com/en/blog/): articles on market entry, localisation and AI enablement in Asia-Pacific
 - [FAQ](https://eastbrightglobal.com/en/#faq)
 - [首頁（繁體中文）](https://eastbrightglobal.com/)
 - [合作案例](https://eastbrightglobal.com/cases.html)
-- [跨境洞察](https://eastbrightglobal.com/insights.html)
+- [跨境洞察](https://eastbrightglobal.com/blog/)
 
 ## Articles
 
+- [AI Makes Marketing Output Cheap. Why Does Judgement Become More Valuable?](https://eastbrightglobal.com/en/blog/ai-output-cheap-judgement-valuable.html): When every team can produce ten creative versions a day, the bottleneck moves from production to deciding which version to run. Here is how marketing teams keep judgement strong. (Markdown: https://eastbrightglobal.com/content/blog/ai-output-cheap-judgement-valuable.en.md)
+- [AI 讓行銷產出變便宜，為什麼判斷反而變得更有價值？](https://eastbrightglobal.com/blog/ai-output-cheap-judgement-valuable.html): 當每個團隊都能一天產出十版素材，瓶頸就從產能移到「哪一版該投」。本文說明行銷團隊如何在導入 AI 時守住判斷力。 (Markdown: https://eastbrightglobal.com/content/blog/ai-output-cheap-judgement-valuable.zh.md)
 - [How Should Foreign Brands Start When Entering Taiwan?](https://eastbrightglobal.com/en/blog/entering-taiwan-where-to-start.html): Start by confirming Taiwan is the right first market, then localise into Taiwan’s own language, platforms and labelling rules before you scale spend. (Markdown: https://eastbrightglobal.com/content/blog/entering-taiwan-where-to-start.en.md)
 - [外國品牌進入台灣市場，該從哪裡開始？](https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html): 先確認台灣是不是現階段該進的市場，再依台灣的語言、平台與標示規定做在地化，小規模測試後才放大預算。 (Markdown: https://eastbrightglobal.com/content/blog/entering-taiwan-where-to-start.zh.md)
+- [How Is Entering Hong Kong and Macau Different from Entering Taiwan?](https://eastbrightglobal.com/en/blog/hong-kong-macau-vs-taiwan.html): Hong Kong, Macau and Taiwan all use Traditional Chinese, but they differ in official languages, platforms and market size. Here is what changes for brands. (Markdown: https://eastbrightglobal.com/content/blog/hong-kong-macau-vs-taiwan.en.md)
+- [進入港澳市場，和進入台灣有什麼不同？](https://eastbrightglobal.com/blog/hong-kong-macau-vs-taiwan.html): 港澳與台灣都使用繁體中文，但正式語文、主流平台與市場規模都不同。本文整理品牌進入港澳時需要調整的地方。 (Markdown: https://eastbrightglobal.com/content/blog/hong-kong-macau-vs-taiwan.zh.md)
+- [Cross-Border Marketing: What Carries Over to a New Market, and What Must Be Rebuilt?](https://eastbrightglobal.com/en/blog/what-carries-over-what-to-rebuild.html): A product’s value proposition usually carries over between markets; its messaging, channels and creators almost always need rebuilding. Here is where the line sits. (Markdown: https://eastbrightglobal.com/content/blog/what-carries-over-what-to-rebuild.en.md)
+- [跨境行銷，什麼能沿用到新市場、什麼必須重做？](https://eastbrightglobal.com/blog/what-carries-over-what-to-rebuild.html): 產品的價值主張通常能跨市場沿用，溝通語彙、通路與創作者則幾乎都要重做。本文說明兩者的界線在哪裡。 (Markdown: https://eastbrightglobal.com/content/blog/what-carries-over-what-to-rebuild.zh.md)
+- [Going Global: Which Asian Market Should a Brand Enter First?](https://eastbrightglobal.com/en/blog/which-asian-market-first.html): The right first market in Asia is the one where demand, price, channels and your ability to operate line up, not the biggest one. Here is how to rank the options. (Markdown: https://eastbrightglobal.com/content/blog/which-asian-market-first.en.md)
+- [品牌出海，該先進哪一個亞洲市場？](https://eastbrightglobal.com/blog/which-asian-market-first.html): 亞洲第一個市場該選的是需求、價格、通路與營運能力都對得上的市場，而不是規模最大的市場。本文整理比較方式與判斷條件。 (Markdown: https://eastbrightglobal.com/content/blog/which-asian-market-first.zh.md)
 
 ## Contact
 
