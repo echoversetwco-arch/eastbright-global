@@ -2,3 +2,6 @@
 *-backup.html
 .DS_Store
 saleskit/
+
+# 尚未核准的文章草稿
+drafts/

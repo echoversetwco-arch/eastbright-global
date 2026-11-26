@@ -495,3 +495,30 @@ html[lang=en] .aien h2{font-size:clamp(2.4rem,6.2vw,5.2rem)}
 @media (max-width:760px){
   html[lang=en] .st b{font-size:clamp(1.1rem,5.8vw,2.2rem)}
 }
+
+/* ---------- 專欄文章 ---------- */
+.post-h1{max-width:22em;font-size:clamp(2rem,4.6vw,3.4rem)!important;line-height:1.2!important}
+.phero .post-meta{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:var(--dk-2);line-height:1.9}
+.post{max-width:46rem}
+.post h2{margin-top:2.8rem;font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:900;line-height:1.4}
+.post h3{margin-top:1.9rem;font-size:1.12rem;font-weight:800;line-height:1.5}
+.post p,.post ul,.post ol,.post .tbl{margin-top:1rem}
+.post p,.post li{font-size:1rem;color:var(--ink-70);line-height:1.9}
+.post p.lead{margin-top:0;padding-left:1.1rem;border-left:4px solid var(--lime-deep);font-size:1.12rem;font-weight:600;color:var(--ink)}
+.post strong{color:var(--ink);font-weight:700}
+.post a{color:var(--ink);font-weight:700;border-bottom:2px solid var(--lime-deep)}
+.post ul{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.post ul li{position:relative;padding-left:1.15rem}
+.post ul li::before{content:"";position:absolute;left:0;top:.8em;width:.4rem;height:.4rem;background:var(--lime-deep)}
+.post ol{padding-left:1.4rem;display:flex;flex-direction:column;gap:.4rem}
+.post .tbl{overflow-x:auto}
+.post table{width:100%;border-collapse:collapse;font-size:.9rem}
+.post th{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-align:left;padding:.6rem .6rem;border-bottom:1.5px solid var(--ink)}
+.post td{padding:.7rem .6rem;border-bottom:1px solid var(--ink-15);vertical-align:top;color:var(--ink-70);line-height:1.7}
+.post-author{margin-top:3rem;padding-top:1.4rem;border-top:1.5px solid var(--ink)}
+.post-author .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;color:var(--ink-45)}
+.post-author p{margin-top:.4rem;color:var(--ink)}
+.post-author a{display:inline-block;margin-top:.4rem;font-weight:800;font-size:.9rem;border-bottom:2px solid var(--lime-deep)}
+a.post-card{display:block;transition:background .2s}
+a.post-card:hover h3{text-decoration:underline;text-decoration-color:var(--lime-deep);text-decoration-thickness:3px}
+.post-card .m{display:block;margin-top:.7rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-45)}
