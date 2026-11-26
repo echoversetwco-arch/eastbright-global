@@ -42,4 +42,32 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://eastbrightglobal.com/en/insights.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://eastbrightglobal.com/insights.html"/>
   </url>
+  <url>
+    <loc>https://eastbrightglobal.com/blog/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://eastbrightglobal.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eastbrightglobal.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eastbrightglobal.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://eastbrightglobal.com/en/blog/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://eastbrightglobal.com/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eastbrightglobal.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eastbrightglobal.com/blog/"/>
+  </url>
+  <url>
+    <loc>https://eastbrightglobal.com/en/blog/entering-taiwan-where-to-start.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eastbrightglobal.com/en/blog/entering-taiwan-where-to-start.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html"/>
+  </url>
+  <url>
+    <loc>https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html</loc>
+    <lastmod>2026-11-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://eastbrightglobal.com/en/blog/entering-taiwan-where-to-start.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html"/>
+  </url>
 </urlset>

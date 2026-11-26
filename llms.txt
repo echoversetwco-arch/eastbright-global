@@ -38,6 +38,11 @@ The website is available in Traditional Chinese (default) and English. Client na
 - [合作案例](https://eastbrightglobal.com/cases.html)
 - [跨境洞察](https://eastbrightglobal.com/insights.html)
 
+## Articles
+
+- [How Should Foreign Brands Start When Entering Taiwan?](https://eastbrightglobal.com/en/blog/entering-taiwan-where-to-start.html): Start by confirming Taiwan is the right first market, then localise into Taiwan’s own language, platforms and labelling rules before you scale spend. (Markdown: https://eastbrightglobal.com/content/blog/entering-taiwan-where-to-start.en.md)
+- [外國品牌進入台灣市場，該從哪裡開始？](https://eastbrightglobal.com/blog/entering-taiwan-where-to-start.html): 先確認台灣是不是現階段該進的市場，再依台灣的語言、平台與標示規定做在地化，小規模測試後才放大預算。 (Markdown: https://eastbrightglobal.com/content/blog/entering-taiwan-where-to-start.zh.md)
+
 ## Contact
 
 - Email: service@eastbrightglobal.com
